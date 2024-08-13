@@ -11,7 +11,7 @@ import SwiftData
 @Model
 final class RequestCollectionStory {
     
-    let id: UUID
+    @Attribute(.unique) let id: UUID
     var name: String
     var requests: [HttpRequest]
     

@@ -7,12 +7,11 @@
 
 import Foundation
 import SwiftData
-import NIOHTTP1
 
 @Model
 final class HttpRequest {
     
-    let id: UUID
+    @Attribute(.unique) let id: UUID
     var secure: Bool
     var method: HTTPMethod
     var path: String
@@ -29,4 +28,8 @@ final class HttpRequest {
         self.headers = headers
     }
     
+}
+
+enum HTTPMethod: Codable {
+    case GET
 }

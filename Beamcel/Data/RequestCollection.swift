@@ -12,14 +12,14 @@ import OrderedCollections
 @Model
 final class RequestCollection {
     
-    let id: UUID
+    @Attribute(.unique) let id: UUID
     var name: String;
-    var stories: OrderedSet<RequestCollectionStory>;
+    var stories: [RequestCollectionStory];
     
-    init(name: String, stories: OrderedSet<RequestCollectionStory>?) {
+    init(name: String, stories: [RequestCollectionStory]?) {
         id = UUID()
         self.name = name
-        self.stories = stories ?? OrderedSet()
+        self.stories = stories ?? []
     }
     
 }

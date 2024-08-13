@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */; };
+		BB9E9FFB2C6BF9560044F0F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FFA2C6BF9560044F0F5 /* ContentView.swift */; };
+		BB9E9FFD2C6BF9560044F0F5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FFC2C6BF9560044F0F5 /* Item.swift */; };
+		BB9E9FFF2C6BF9570044F0F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */; };
+		BB9EA0022C6BF9570044F0F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9EA0012C6BF9570044F0F5 /* Preview Assets.xcassets */; };
+		BB9EA00D2C6BF9570044F0F5 /* BeamcelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA00C2C6BF9570044F0F5 /* BeamcelTests.swift */; };
+		BB9EA0172C6BF9570044F0F5 /* BeamcelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA0162C6BF9570044F0F5 /* BeamcelUITests.swift */; };
+		BB9EA0192C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA0182C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB9EA0092C6BF9570044F0F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB9E9FED2C6BF9560044F0F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB9E9FF42C6BF9560044F0F5;
+			remoteInfo = Beamcel;
+		};
+		BB9EA0132C6BF9570044F0F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB9E9FED2C6BF9560044F0F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB9E9FF42C6BF9560044F0F5;
+			remoteInfo = Beamcel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB9E9FF52C6BF9560044F0F5 /* Beamcel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beamcel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelApp.swift; sourceTree = "<group>"; };
+		BB9E9FFA2C6BF9560044F0F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB9E9FFC2C6BF9560044F0F5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB9EA0012C6BF9570044F0F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB9EA0032C6BF9570044F0F5 /* Beamcel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beamcel.entitlements; sourceTree = "<group>"; };
+		BB9EA0082C6BF9570044F0F5 /* BeamcelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeamcelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB9EA00C2C6BF9570044F0F5 /* BeamcelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelTests.swift; sourceTree = "<group>"; };
+		BB9EA0122C6BF9570044F0F5 /* BeamcelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeamcelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB9EA0162C6BF9570044F0F5 /* BeamcelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelUITests.swift; sourceTree = "<group>"; };
+		BB9EA0182C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB9E9FF22C6BF9560044F0F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB9EA0052C6BF9570044F0F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB9EA00F2C6BF9570044F0F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB9E9FEC2C6BF9560044F0F5 = {
+			isa = PBXGroup;
+			children = (
+				BB9E9FF72C6BF9560044F0F5 /* Beamcel */,
+				BB9EA00B2C6BF9570044F0F5 /* BeamcelTests */,
+				BB9EA0152C6BF9570044F0F5 /* BeamcelUITests */,
+				BB9E9FF62C6BF9560044F0F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB9E9FF62C6BF9560044F0F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB9E9FF52C6BF9560044F0F5 /* Beamcel.app */,
+				BB9EA0082C6BF9570044F0F5 /* BeamcelTests.xctest */,
+				BB9EA0122C6BF9570044F0F5 /* BeamcelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB9E9FF72C6BF9560044F0F5 /* Beamcel */ = {
+			isa = PBXGroup;
+			children = (
+				BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */,
+				BB9E9FFA2C6BF9560044F0F5 /* ContentView.swift */,
+				BB9E9FFC2C6BF9560044F0F5 /* Item.swift */,
+				BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */,
+				BB9EA0032C6BF9570044F0F5 /* Beamcel.entitlements */,
+				BB9EA0002C6BF9570044F0F5 /* Preview Content */,
+			);
+			path = Beamcel;
+			sourceTree = "<group>";
+		};
+		BB9EA0002C6BF9570044F0F5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BB9EA0012C6BF9570044F0F5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB9EA00B2C6BF9570044F0F5 /* BeamcelTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB9EA00C2C6BF9570044F0F5 /* BeamcelTests.swift */,
+			);
+			path = BeamcelTests;
+			sourceTree = "<group>";
+		};
+		BB9EA0152C6BF9570044F0F5 /* BeamcelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB9EA0162C6BF9570044F0F5 /* BeamcelUITests.swift */,
+				BB9EA0182C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift */,
+			);
+			path = BeamcelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB9E9FF42C6BF9560044F0F5 /* Beamcel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB9EA01C2C6BF9570044F0F5 /* Build configuration list for PBXNativeTarget "Beamcel" */;
+			buildPhases = (
+				BB9E9FF12C6BF9560044F0F5 /* Sources */,
+				BB9E9FF22C6BF9560044F0F5 /* Frameworks */,
+				BB9E9FF32C6BF9560044F0F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Beamcel;
+			productName = Beamcel;
+			productReference = BB9E9FF52C6BF9560044F0F5 /* Beamcel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB9EA0072C6BF9570044F0F5 /* BeamcelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB9EA01F2C6BF9570044F0F5 /* Build configuration list for PBXNativeTarget "BeamcelTests" */;
+			buildPhases = (
+				BB9EA0042C6BF9570044F0F5 /* Sources */,
+				BB9EA0052C6BF9570044F0F5 /* Frameworks */,
+				BB9EA0062C6BF9570044F0F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB9EA00A2C6BF9570044F0F5 /* PBXTargetDependency */,
+			);
+			name = BeamcelTests;
+			productName = BeamcelTests;
+			productReference = BB9EA0082C6BF9570044F0F5 /* BeamcelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB9EA0112C6BF9570044F0F5 /* BeamcelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB9EA0222C6BF9570044F0F5 /* Build configuration list for PBXNativeTarget "BeamcelUITests" */;
+			buildPhases = (
+				BB9EA00E2C6BF9570044F0F5 /* Sources */,
+				BB9EA00F2C6BF9570044F0F5 /* Frameworks */,
+				BB9EA0102C6BF9570044F0F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB9EA0142C6BF9570044F0F5 /* PBXTargetDependency */,
+			);
+			name = BeamcelUITests;
+			productName = BeamcelUITests;
+			productReference = BB9EA0122C6BF9570044F0F5 /* BeamcelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB9E9FED2C6BF9560044F0F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					BB9E9FF42C6BF9560044F0F5 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					BB9EA0072C6BF9570044F0F5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BB9E9FF42C6BF9560044F0F5;
+					};
+					BB9EA0112C6BF9570044F0F5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BB9E9FF42C6BF9560044F0F5;
+					};
+				};
+			};
+			buildConfigurationList = BB9E9FF02C6BF9560044F0F5 /* Build configuration list for PBXProject "Beamcel" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB9E9FEC2C6BF9560044F0F5;
+			productRefGroup = BB9E9FF62C6BF9560044F0F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB9E9FF42C6BF9560044F0F5 /* Beamcel */,
+				BB9EA0072C6BF9570044F0F5 /* BeamcelTests */,
+				BB9EA0112C6BF9570044F0F5 /* BeamcelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB9E9FF32C6BF9560044F0F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB9EA0022C6BF9570044F0F5 /* Preview Assets.xcassets in Resources */,
+				BB9E9FFF2C6BF9570044F0F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB9EA0062C6BF9570044F0F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB9EA0102C6BF9570044F0F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB9E9FF12C6BF9560044F0F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB9E9FFB2C6BF9560044F0F5 /* ContentView.swift in Sources */,
+				BB9E9FFD2C6BF9560044F0F5 /* Item.swift in Sources */,
+				BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB9EA0042C6BF9570044F0F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB9EA00D2C6BF9570044F0F5 /* BeamcelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB9EA00E2C6BF9570044F0F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB9EA0192C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift in Sources */,
+				BB9EA0172C6BF9570044F0F5 /* BeamcelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB9EA00A2C6BF9570044F0F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB9E9FF42C6BF9560044F0F5 /* Beamcel */;
+			targetProxy = BB9EA0092C6BF9570044F0F5 /* PBXContainerItemProxy */;
+		};
+		BB9EA0142C6BF9570044F0F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB9E9FF42C6BF9560044F0F5 /* Beamcel */;
+			targetProxy = BB9EA0132C6BF9570044F0F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BB9EA01A2C6BF9570044F0F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB9EA01B2C6BF9570044F0F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		BB9EA01D2C6BF9570044F0F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Beamcel/Beamcel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Beamcel/Preview Content\"";
+				DEVELOPMENT_TEAM = 73CWWRN5ZQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mkersten.Beamcel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BB9EA01E2C6BF9570044F0F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Beamcel/Beamcel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Beamcel/Preview Content\"";
+				DEVELOPMENT_TEAM = 73CWWRN5ZQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mkersten.Beamcel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BB9EA0202C6BF9570044F0F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73CWWRN5ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mkersten.BeamcelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beamcel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Beamcel";
+			};
+			name = Debug;
+		};
+		BB9EA0212C6BF9570044F0F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73CWWRN5ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mkersten.BeamcelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beamcel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Beamcel";
+			};
+			name = Release;
+		};
+		BB9EA0232C6BF9570044F0F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73CWWRN5ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mkersten.BeamcelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Beamcel;
+			};
+			name = Debug;
+		};
+		BB9EA0242C6BF9570044F0F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73CWWRN5ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mkersten.BeamcelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Beamcel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB9E9FF02C6BF9560044F0F5 /* Build configuration list for PBXProject "Beamcel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB9EA01A2C6BF9570044F0F5 /* Debug */,
+				BB9EA01B2C6BF9570044F0F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB9EA01C2C6BF9570044F0F5 /* Build configuration list for PBXNativeTarget "Beamcel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB9EA01D2C6BF9570044F0F5 /* Debug */,
+				BB9EA01E2C6BF9570044F0F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB9EA01F2C6BF9570044F0F5 /* Build configuration list for PBXNativeTarget "BeamcelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB9EA0202C6BF9570044F0F5 /* Debug */,
+				BB9EA0212C6BF9570044F0F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB9EA0222C6BF9570044F0F5 /* Build configuration list for PBXNativeTarget "BeamcelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB9EA0232C6BF9570044F0F5 /* Debug */,
+				BB9EA0242C6BF9570044F0F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB9E9FED2C6BF9560044F0F5 /* Project object */;
+}

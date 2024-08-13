@@ -15,6 +15,10 @@
 		BB9EA00D2C6BF9570044F0F5 /* BeamcelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA00C2C6BF9570044F0F5 /* BeamcelTests.swift */; };
 		BB9EA0172C6BF9570044F0F5 /* BeamcelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA0162C6BF9570044F0F5 /* BeamcelUITests.swift */; };
 		BB9EA0192C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA0182C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift */; };
+		BBEBE4002C6C010B004A6DFD /* AsyncHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = BBEBE3FF2C6C010B004A6DFD /* AsyncHTTPClient */; };
+		BBEBE4042C6C0349004A6DFD /* RequestCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4032C6C0349004A6DFD /* RequestCollection.swift */; };
+		BBEBE4062C6C03C0004A6DFD /* RequestCollectionStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4052C6C03C0004A6DFD /* RequestCollectionStory.swift */; };
+		BBEBE4082C6C0591004A6DFD /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,9 @@
 		BB9EA0122C6BF9570044F0F5 /* BeamcelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeamcelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9EA0162C6BF9570044F0F5 /* BeamcelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelUITests.swift; sourceTree = "<group>"; };
 		BB9EA0182C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BBEBE4032C6C0349004A6DFD /* RequestCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCollection.swift; sourceTree = "<group>"; };
+		BBEBE4052C6C03C0004A6DFD /* RequestCollectionStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCollectionStory.swift; sourceTree = "<group>"; };
+		BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEBE4002C6C010B004A6DFD /* AsyncHTTPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +105,8 @@
 		BB9E9FF72C6BF9560044F0F5 /* Beamcel */ = {
 			isa = PBXGroup;
 			children = (
+				BBEBE4022C6C0312004A6DFD /* Data */,
+				BBEBE4012C6C0304004A6DFD /* Backend */,
 				BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */,
 				BB9E9FFA2C6BF9560044F0F5 /* ContentView.swift */,
 				BB9E9FFC2C6BF9560044F0F5 /* Item.swift */,
@@ -132,6 +142,23 @@
 			path = BeamcelUITests;
 			sourceTree = "<group>";
 		};
+		BBEBE4012C6C0304004A6DFD /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		BBEBE4022C6C0312004A6DFD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBE4032C6C0349004A6DFD /* RequestCollection.swift */,
+				BBEBE4052C6C03C0004A6DFD /* RequestCollectionStory.swift */,
+				BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +175,9 @@
 			dependencies = (
 			);
 			name = Beamcel;
+			packageProductDependencies = (
+				BBEBE3FF2C6C010B004A6DFD /* AsyncHTTPClient */,
+			);
 			productName = Beamcel;
 			productReference = BB9E9FF52C6BF9560044F0F5 /* Beamcel.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +250,9 @@
 				Base,
 			);
 			mainGroup = BB9E9FEC2C6BF9560044F0F5;
+			packageReferences = (
+				BBEBE3FE2C6C010B004A6DFD /* XCRemoteSwiftPackageReference "async-http-client" */,
+			);
 			productRefGroup = BB9E9FF62C6BF9560044F0F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,8 +296,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB9E9FFB2C6BF9560044F0F5 /* ContentView.swift in Sources */,
+				BBEBE4082C6C0591004A6DFD /* HttpRequest.swift in Sources */,
 				BB9E9FFD2C6BF9560044F0F5 /* Item.swift in Sources */,
 				BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */,
+				BBEBE4042C6C0349004A6DFD /* RequestCollection.swift in Sources */,
+				BBEBE4062C6C03C0004A6DFD /* RequestCollectionStory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +623,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBEBE3FE2C6C010B004A6DFD /* XCRemoteSwiftPackageReference "async-http-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-server/async-http-client";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBEBE3FF2C6C010B004A6DFD /* AsyncHTTPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBEBE3FE2C6C010B004A6DFD /* XCRemoteSwiftPackageReference "async-http-client" */;
+			productName = AsyncHTTPClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB9E9FED2C6BF9560044F0F5 /* Project object */;
 }

@@ -12,7 +12,9 @@ import SwiftData
 struct BeamcelApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            HttpRequest.self,
+            RequestCollection.self,
+            RequestCollectionStory.self,
+            HttpRequest.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +27,7 @@ struct BeamcelApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CollectionView(collection: RequestCollection())
         }
         .modelContainer(sharedModelContainer)
     }

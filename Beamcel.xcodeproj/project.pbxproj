@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */; };
-		BB9E9FFB2C6BF9560044F0F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FFA2C6BF9560044F0F5 /* ContentView.swift */; };
+		BB9E9FFB2C6BF9560044F0F5 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FFA2C6BF9560044F0F5 /* CollectionView.swift */; };
 		BB9E9FFF2C6BF9570044F0F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */; };
 		BB9EA0022C6BF9570044F0F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9EA0012C6BF9570044F0F5 /* Preview Assets.xcassets */; };
 		BB9EA00D2C6BF9570044F0F5 /* BeamcelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA00C2C6BF9570044F0F5 /* BeamcelTests.swift */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		BB9E9FF52C6BF9560044F0F5 /* Beamcel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beamcel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelApp.swift; sourceTree = "<group>"; };
-		BB9E9FFA2C6BF9560044F0F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB9E9FFA2C6BF9560044F0F5 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB9EA0012C6BF9570044F0F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB9EA0032C6BF9570044F0F5 /* Beamcel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beamcel.entitlements; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				BBEBE4022C6C0312004A6DFD /* Data */,
 				BBEBE4012C6C0304004A6DFD /* Backend */,
 				BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */,
-				BB9E9FFA2C6BF9560044F0F5 /* ContentView.swift */,
+				BB9E9FFA2C6BF9560044F0F5 /* CollectionView.swift */,
 				BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */,
 				BB9EA0032C6BF9570044F0F5 /* Beamcel.entitlements */,
 				BB9EA0002C6BF9570044F0F5 /* Preview Content */,
@@ -304,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB9E9FFB2C6BF9560044F0F5 /* ContentView.swift in Sources */,
+				BB9E9FFB2C6BF9560044F0F5 /* CollectionView.swift in Sources */,
 				BBEBE4082C6C0591004A6DFD /* HttpRequest.swift in Sources */,
 				BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */,
 				BBEBE4042C6C0349004A6DFD /* RequestCollection.swift in Sources */,

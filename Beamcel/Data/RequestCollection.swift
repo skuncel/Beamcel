@@ -13,13 +13,13 @@ import OrderedCollections
 final class RequestCollection {
     
     @Attribute(.unique) let id: UUID
-    var name: String;
-    var stories: [RequestCollectionStory];
+    var name: String
+    var stories: [RequestCollectionStory]?
     
-    init(name: String, stories: [RequestCollectionStory]?) {
+    init() {
         id = UUID()
-        self.name = name
-        self.stories = stories ?? []
+        self.name = "Default"
+        self.stories = Optional.none
     }
     
 }

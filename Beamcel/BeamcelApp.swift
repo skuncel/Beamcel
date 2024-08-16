@@ -27,8 +27,14 @@ struct BeamcelApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CollectionView(collection: RequestCollection())
+            let requestCollections = try? sharedModelContainer.mainContext.fetch(FetchDescriptor<RequestCollection>())
+            if requestCollections!.isEmpty {
+                BootstrapView()
+            } else {
+                CollectionPickerView()
+            }
         }
         .modelContainer(sharedModelContainer)
+        .windowStyle(.hiddenTitleBar)
     }
 }

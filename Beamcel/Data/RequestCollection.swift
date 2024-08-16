@@ -14,12 +14,12 @@ final class RequestCollection {
     
     @Attribute(.unique) let id: UUID
     var name: String
-    var stories: [RequestCollectionStory]?
+    var stories: [RequestCollectionStory]
     
     init() {
         id = UUID()
         self.name = "Default"
-        self.stories = Optional.none
+        self.stories = []
     }
     
 }

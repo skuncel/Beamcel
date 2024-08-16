@@ -19,6 +19,14 @@
 		BBEBE4062C6C03C0004A6DFD /* RequestCollectionStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4052C6C03C0004A6DFD /* RequestCollectionStory.swift */; };
 		BBEBE4082C6C0591004A6DFD /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */; };
 		BBEBE40B2C6C0E4A004A6DFD /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = BBEBE40A2C6C0E4A004A6DFD /* OrderedCollections */; };
+		BBEBE40E2C6E9321004A6DFD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE40D2C6E9321004A6DFD /* DataManager.swift */; };
+		BBEBE4102C6E9407004A6DFD /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE40F2C6E9407004A6DFD /* SwiftDataManager.swift */; };
+		BBEBE4122C6E946C004A6DFD /* HttpRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4112C6E946C004A6DFD /* HttpRequestDispatcher.swift */; };
+		BBEBE4142C6E9615004A6DFD /* HttpRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4132C6E9615004A6DFD /* HttpRequestView.swift */; };
+		BBEBE4162C6E9C69004A6DFD /* BootstrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4152C6E9C69004A6DFD /* BootstrapView.swift */; };
+		BBEBE4182C6E9C94004A6DFD /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4172C6E9C94004A6DFD /* CollectionPickerView.swift */; };
+		BBEBE41A2C6EC990004A6DFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BBEBE4192C6EC990004A6DFD /* README.md */; };
+		BBEBE41C2C6EDE5E004A6DFD /* CollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE41B2C6EDE5E004A6DFD /* CollectionDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		BBEBE4032C6C0349004A6DFD /* RequestCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCollection.swift; sourceTree = "<group>"; };
 		BBEBE4052C6C03C0004A6DFD /* RequestCollectionStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCollectionStory.swift; sourceTree = "<group>"; };
 		BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		BBEBE40D2C6E9321004A6DFD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BBEBE40F2C6E9407004A6DFD /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
+		BBEBE4112C6E946C004A6DFD /* HttpRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestDispatcher.swift; sourceTree = "<group>"; };
+		BBEBE4132C6E9615004A6DFD /* HttpRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestView.swift; sourceTree = "<group>"; };
+		BBEBE4152C6E9C69004A6DFD /* BootstrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapView.swift; sourceTree = "<group>"; };
+		BBEBE4172C6E9C94004A6DFD /* CollectionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
+		BBEBE4192C6EC990004A6DFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BBEBE41B2C6EDE5E004A6DFD /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +101,7 @@
 		BB9E9FEC2C6BF9560044F0F5 = {
 			isa = PBXGroup;
 			children = (
+				BBEBE4192C6EC990004A6DFD /* README.md */,
 				BB9E9FF72C6BF9560044F0F5 /* Beamcel */,
 				BB9EA00B2C6BF9570044F0F5 /* BeamcelTests */,
 				BB9EA0152C6BF9570044F0F5 /* BeamcelUITests */,
@@ -109,7 +126,6 @@
 				BBEBE4022C6C0312004A6DFD /* Data */,
 				BBEBE4012C6C0304004A6DFD /* Backend */,
 				BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */,
-				BB9E9FFA2C6BF9560044F0F5 /* CollectionView.swift */,
 				BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */,
 				BB9EA0032C6BF9570044F0F5 /* Beamcel.entitlements */,
 				BB9EA0002C6BF9570044F0F5 /* Preview Content */,
@@ -145,6 +161,7 @@
 		BBEBE4012C6C0304004A6DFD /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				BBEBE4112C6E946C004A6DFD /* HttpRequestDispatcher.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -155,6 +172,8 @@
 				BBEBE4032C6C0349004A6DFD /* RequestCollection.swift */,
 				BBEBE4052C6C03C0004A6DFD /* RequestCollectionStory.swift */,
 				BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */,
+				BBEBE40D2C6E9321004A6DFD /* DataManager.swift */,
+				BBEBE40F2C6E9407004A6DFD /* SwiftDataManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -162,6 +181,11 @@
 		BBEBE40C2C6C14AC004A6DFD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB9E9FFA2C6BF9560044F0F5 /* CollectionView.swift */,
+				BBEBE4132C6E9615004A6DFD /* HttpRequestView.swift */,
+				BBEBE4152C6E9C69004A6DFD /* BootstrapView.swift */,
+				BBEBE4172C6E9C94004A6DFD /* CollectionPickerView.swift */,
+				BBEBE41B2C6EDE5E004A6DFD /* CollectionDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEBE41A2C6EC990004A6DFD /* README.md in Resources */,
 				BB9EA0022C6BF9570044F0F5 /* Preview Assets.xcassets in Resources */,
 				BB9E9FFF2C6BF9570044F0F5 /* Assets.xcassets in Resources */,
 			);
@@ -305,9 +330,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB9E9FFB2C6BF9560044F0F5 /* CollectionView.swift in Sources */,
+				BBEBE4162C6E9C69004A6DFD /* BootstrapView.swift in Sources */,
+				BBEBE4102C6E9407004A6DFD /* SwiftDataManager.swift in Sources */,
+				BBEBE41C2C6EDE5E004A6DFD /* CollectionDetailView.swift in Sources */,
+				BBEBE4142C6E9615004A6DFD /* HttpRequestView.swift in Sources */,
+				BBEBE40E2C6E9321004A6DFD /* DataManager.swift in Sources */,
 				BBEBE4082C6C0591004A6DFD /* HttpRequest.swift in Sources */,
+				BBEBE4182C6E9C94004A6DFD /* CollectionPickerView.swift in Sources */,
 				BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */,
 				BBEBE4042C6C0349004A6DFD /* RequestCollection.swift in Sources */,
+				BBEBE4122C6E946C004A6DFD /* HttpRequestDispatcher.swift in Sources */,
 				BBEBE4062C6C03C0004A6DFD /* RequestCollectionStory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Beamcel/Beamcel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -477,6 +510,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Beamcel;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Beamcel/Beamcel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -505,6 +541,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Beamcel;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CollectionView.swift
 //  Beamcel
 //
 //  Created by Marcel Kersten on 13.08.24.
@@ -12,23 +12,25 @@ struct CollectionView: View {
     @Environment(\.modelContext) private var modelContext
     @Bindable var collection: RequestCollection
     @State private var selectedStory: RequestCollectionStory?
+    @State private var selectedRequest: HttpRequest?
     
     var body: some View {
         NavigationSplitView {
             Picker("Story", selection: $selectedStory) {
-                Text("No story, create one").tag(RequestCollectionStory?.none)
-                ForEach(collection.stories ?? []) { story in
-                    Text(story.name).tag(story as RequestCollectionStory?)
+                if(collection.stories.isEmpty) {
+                    Text("No story, create one").tag(RequestCollectionStory?.none)
+                } else {
+                    ForEach(collection.stories) { story in
+                        Text(story.name).tag(story as RequestCollectionStory?)
+                    }
                 }
             }.labelsHidden().padding(.horizontal)
             Spacer()
-            List {
-                ForEach(selectedStory?.requests ?? []) { request in
-                    NavigationLink {
-                        Text("\(request.name)")
-                    } label: {
-                        Text(request.name)
-                    }
+            List(selectedStory?.requests ?? [], id: \.self, selection: $selectedRequest) { request in
+                NavigationLink {
+                    HttpRequestView(httpRequest: request)
+                } label: {
+                    Text(request.name)
                 }
             }
             .navigationSplitViewColumnWidth(min: 180, ideal: 200)
@@ -48,7 +50,11 @@ struct CollectionView: View {
                 }
             }
         } detail: {
-            Text("Select an request from the side menu")
+            if let request = selectedRequest {
+                HttpRequestView(httpRequest: request)
+            } else {
+                Text("Select an request from the side menu")
+            }
         }
     }
 
@@ -61,9 +67,9 @@ struct CollectionView: View {
 }
 
 #Preview {
-    CollectionView(collection: RequestCollection())
-        .modelContainer(for: [RequestCollection.self,
-                              RequestCollectionStory.self,
-                              HttpRequest.self],
-                        inMemory: true)
+    let previewHttpRequest = HttpRequest(name: "Test", secure: true, method: HTTPMethod.GET, path: "/test", host: "localhost", headers: Optional.none)
+    let previewRequestCollectionStory = RequestCollectionStory(name: "Preview story", requests: [previewHttpRequest])
+    let previewRequestCollection = RequestCollection()
+    previewRequestCollection.stories.append(previewRequestCollectionStory)
+    return CollectionView(collection: RequestCollection())
 }

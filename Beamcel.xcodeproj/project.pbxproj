@@ -25,6 +25,7 @@
 		BBEBE4182C6E9C94004A6DFD /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4172C6E9C94004A6DFD /* CollectionPickerView.swift */; };
 		BBEBE41A2C6EC990004A6DFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BBEBE4192C6EC990004A6DFD /* README.md */; };
 		BBEBE41C2C6EDE5E004A6DFD /* CollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE41B2C6EDE5E004A6DFD /* CollectionDetailView.swift */; };
+		BBEBE41F2C700A00004A6DFD /* RequesWizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE41E2C700A00004A6DFD /* RequesWizardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		BBEBE4192C6EC990004A6DFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBEBE41B2C6EDE5E004A6DFD /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
 		BBEBE41D2C6FEAEB004A6DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BBEBE41E2C700A00004A6DFD /* RequesWizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesWizardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				BBEBE4132C6E9615004A6DFD /* HttpRequestView.swift */,
 				BBEBE4172C6E9C94004A6DFD /* CollectionPickerView.swift */,
 				BBEBE41B2C6EDE5E004A6DFD /* CollectionDetailView.swift */,
+				BBEBE41E2C700A00004A6DFD /* RequesWizardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */,
 				BBEBE4042C6C0349004A6DFD /* RequestCollection.swift in Sources */,
 				BBEBE4122C6E946C004A6DFD /* HttpRequestDispatcher.swift in Sources */,
+				BBEBE41F2C700A00004A6DFD /* RequesWizardView.swift in Sources */,
 				BBEBE4062C6C03C0004A6DFD /* RequestCollectionStory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

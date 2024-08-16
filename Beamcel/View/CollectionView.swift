@@ -19,6 +19,7 @@ struct CollectionView: View {
     @State private var selectedStory: RequestCollectionStory?
     @State private var selectedRequest: HttpRequest?
     @State private var isCreateStorySheetPresented = false
+    @State private var isCreateRequestSheetPresented = false
     @State private var newStoryName = ""
     
     var body: some View {
@@ -44,27 +45,12 @@ struct CollectionView: View {
             .toolbar {
                 ToolbarItem {
                     Menu {
-                        Button(action: createRequest) {
-                            Label("New Request", systemImage: "antenna.radiowaves.left.and.right")
+                        Button("New Rquest") {
+                            isCreateRequestSheetPresented.toggle()
                         }
                         Button("New Story") {
-                            isCreateStorySheetPresented = true
-                        }.sheet(isPresented: $isCreateStorySheetPresented) {
-                            log.info("Opening create tory sheet")
-                        } content: {
-                            VStack {
-                                TextField("Story name", text: $newStoryName)
-                                    .padding(.bottom)
-                                Button("Create story") {
-                                    let newCollection = RequestCollection()
-                                    newCollection.name = newStoryName
-                                    modelContext.insert(newCollection)
-                                    try? modelContext.save()
-                                    newStoryName = ""
-                                    isCreateStorySheetPresented = false
-                                }
-                            }
-                            .padding()
+                            log.info("Show sheet")
+                            isCreateStorySheetPresented.toggle()
                         }
                     } label: {
                         Label("New", systemImage: "plus")
@@ -78,6 +64,23 @@ struct CollectionView: View {
             } else {
                 Text("Select an request from the side menu")
             }
+        }
+        .sheet(isPresented: $isCreateStorySheetPresented) {
+            VStack {
+                TextField("Story name", text: $newStoryName)
+                    .padding(.bottom)
+                Button("Create story") {
+                    let newStory = RequestCollectionStory(name: newStoryName, requests: [])
+                    collection.stories.append(newStory);
+                    try? modelContext.save()
+                    newStoryName = ""
+                    isCreateStorySheetPresented.toggle()
+                }
+            }
+            .padding()
+        }
+        .sheet(isPresented: $isCreateRequestSheetPresented) {
+            RequesWizardView().scaledToFill()
         }
     }
 

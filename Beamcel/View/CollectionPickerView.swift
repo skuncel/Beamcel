@@ -10,8 +10,11 @@ import SwiftData
 
 struct CollectionPickerView: View {
     @Environment(\.modelContext) var modelContext
+    
     @Query private var collections: [RequestCollection]
     @State private var selectedCollection: RequestCollection?
+    @State private var isCreateCollectionPopoverPresented: Bool = false
+    @State private var newCollectionName: String = ""
     
     var body: some View {
         NavigationSplitView {
@@ -33,7 +36,21 @@ struct CollectionPickerView: View {
             .toolbar {
                 ToolbarItem {
                     Button("Add collection", systemImage: "plus") {
-                        
+                        isCreateCollectionPopoverPresented = true
+                    }.popover(isPresented: $isCreateCollectionPopoverPresented, arrowEdge: .bottom) {
+                        VStack {
+                            TextField("Collection name", text: $newCollectionName)
+                                .padding(.bottom)
+                            Button("Create collection") {
+                                let newCollection = RequestCollection()
+                                newCollection.name = newCollectionName
+                                modelContext.insert(newCollection)
+                                try? modelContext.save()
+                                newCollectionName = ""
+                                isCreateCollectionPopoverPresented = false
+                            }
+                        }
+                        .padding()
                     }
                 }
             }

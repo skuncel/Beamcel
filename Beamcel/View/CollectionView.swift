@@ -7,12 +7,19 @@
 
 import SwiftUI
 import SwiftData
+import Logging
 
 struct CollectionView: View {
+    
+    private let log = Logger(label: "CollectionView")
+    
     @Environment(\.modelContext) private var modelContext
     @Bindable var collection: RequestCollection
+    
     @State private var selectedStory: RequestCollectionStory?
     @State private var selectedRequest: HttpRequest?
+    @State private var isCreateStorySheetPresented = false
+    @State private var newStoryName = ""
     
     var body: some View {
         NavigationSplitView {
@@ -40,8 +47,24 @@ struct CollectionView: View {
                         Button(action: createRequest) {
                             Label("New Request", systemImage: "antenna.radiowaves.left.and.right")
                         }
-                        Button(action: createRequest) {
-                            Label("New Story", systemImage: "book.pages")
+                        Button("New Story") {
+                            isCreateStorySheetPresented = true
+                        }.sheet(isPresented: $isCreateStorySheetPresented) {
+                            log.info("Opening create tory sheet")
+                        } content: {
+                            VStack {
+                                TextField("Story name", text: $newStoryName)
+                                    .padding(.bottom)
+                                Button("Create story") {
+                                    let newCollection = RequestCollection()
+                                    newCollection.name = newStoryName
+                                    modelContext.insert(newCollection)
+                                    try? modelContext.save()
+                                    newStoryName = ""
+                                    isCreateStorySheetPresented = false
+                                }
+                            }
+                            .padding()
                         }
                     } label: {
                         Label("New", systemImage: "plus")

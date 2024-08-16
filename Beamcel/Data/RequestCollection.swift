@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftData
-import OrderedCollections
 
 @Model
 final class RequestCollection {

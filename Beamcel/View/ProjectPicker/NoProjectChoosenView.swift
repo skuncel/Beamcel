@@ -34,6 +34,13 @@ struct NoProjectChoosenView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 24))
                         .blur(radius: 64)
                         .opacity(0.5)
+                } else {
+                    Rectangle()
+                        .frame(width: 104, height: 104)
+                        .foregroundColor(.accentColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                        .blur(radius: 64)
+                        .opacity(1)
                 }
                 Image(nsImage: NSApp.applicationIconImage)
                     .resizable()
@@ -57,13 +64,13 @@ struct NoProjectChoosenView: View {
                     ProjectActionButtonView(
                         iconName: "plus",
                         title: "Create new project",
-                        color: .accent,
+                        color: .teal,
                         action: {projectEditorSheetShown.toggle()}
                     )
                     ProjectActionButtonView(
                         iconName: "folder",
                         title: "Import project",
-                        color: .primary,
+                        color: .teal,
                         action: {}
                     )
                 }

@@ -9,20 +9,20 @@ import SwiftUI
 
 struct ProjectDetailsView: View {
     
+    @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
     @Bindable var project: BeamcelProject
+    @Binding var projectEditorSheetShown: Bool
     
     var body: some View {
         VStack {
             ZStack {
-                if colorScheme == .dark {
-                    Rectangle()
-                        .frame(width: 104, height: 104)
-                        .foregroundColor(.accentColor)
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
-                        .blur(radius: 64)
-                        .opacity(0.5)
-                }
+                Rectangle()
+                    .frame(width: 104, height: 104)
+                    .foregroundColor(.accentColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 24))
+                    .blur(radius: 64)
+                    .opacity(colorScheme == .dark ? 0.5 : 1)
                 Image(nsImage: NSApp.applicationIconImage)
                     .resizable()
                     .frame(width: 128, height: 128)
@@ -39,21 +39,24 @@ struct ProjectDetailsView: View {
                     ProjectActionButtonView(
                         iconName: "plus",
                         title: "Open project",
-                        color: .accent,
+                        color: .teal,
                         action: {}
                     )
                     ProjectActionButtonView(
                         iconName: "pencil",
                         title: "Edit project",
-                        color: .accent,
-                        action: {}
+                        color: .teal,
+                        action: { projectEditorSheetShown.toggle() }
                     )
                     Spacer().frame(height: 20)
                     ProjectActionButtonView(
                         iconName: "trash",
                         title: "Delete project",
                         color: .red,
-                        action: {}
+                        action: { 
+                            modelContext.delete(project)
+                            try? modelContext.save()
+                        }
                     )
                 }
                 .frame(width: 250)
@@ -66,5 +69,6 @@ struct ProjectDetailsView: View {
 #Preview {
     let project = BeamcelProject()
     project.name = "Preview"
-    return ProjectDetailsView(project: project)
+    @State var previewBool = false;
+    return ProjectDetailsView(project: project, projectEditorSheetShown: $previewBool)
 }

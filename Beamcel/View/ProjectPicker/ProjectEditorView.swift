@@ -13,19 +13,15 @@ struct ProjectEditorView: View {
     @Binding var project: BeamcelProject
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             Text("Edit project")
                 .font(.system(size: 36, weight: .bold))
-            TextField("Name", text: $project.name)
-            TextField("Description", text: $project.desc)
-            Spacer()
-            HStack {
-                ProjectActionButtonView(iconName: "x.circle", title: "Cancel", color: .accent, action: {saveProject()})
-                ProjectActionButtonView(iconName: "pencil", title: "Save", color: .accent, action: {saveProject()})
+            Form {
+                TextField("Name", text: $project.name)
+                TextField("Description", text: $project.desc)
             }
-            
-        }
-        .padding()
+            .formStyle(.grouped)
+        }.padding()
     }
     
     func saveProject() {

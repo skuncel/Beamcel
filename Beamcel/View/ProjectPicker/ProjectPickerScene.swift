@@ -30,16 +30,16 @@ struct ProjectPickerScene: Scene {
         }
     
     struct ProjectPickerView: View {
-        
+                
+        @State var projectEditorSheetShown = false
         @State var existingProjects: [BeamcelProject]
         @State var selectedProject: BeamcelProject?
-        @State var projectEditorSheetShown = false
         
         var body: some View {
             HStack {
                 ProjectListView(existingProjects: $existingProjects, projectSelection: $selectedProject)
                 if let unwrappedSelectedProject = selectedProject {
-                    ProjectDetailsView(project: unwrappedSelectedProject)
+                    ProjectDetailsView(project: unwrappedSelectedProject, projectEditorSheetShown: $projectEditorSheetShown)
                         .frame(width: 480)
                 } else {
                     NoProjectChoosenView(projectEditorSheetShown: $projectEditorSheetShown)
@@ -47,6 +47,13 @@ struct ProjectPickerScene: Scene {
                 }
             }
             .sheet(isPresented: $projectEditorSheetShown) {
+                HStack {
+                    Button("Cancel") { projectEditorSheetShown.toggle() }
+                        .backgroundStyle(.windowBackground)
+                    Spacer()
+                    Button("Save") { }
+                        .backgroundStyle(.windowBackground)
+                }.padding()
                 if let unwrappedSelectedProject = selectedProject {
                     @State var project = unwrappedSelectedProject;
                     ProjectEditorView(project: $project as Binding<BeamcelProject>)

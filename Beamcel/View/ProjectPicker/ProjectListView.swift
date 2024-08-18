@@ -20,9 +20,8 @@ struct ProjectListView: View {
                     .font(.system(size: 20, weight: .bold))
                     .padding(.bottom, 10)
                 ForEach(existingProjects, id: \.self) { project in
-                    ProjectListItemView(project: project)
+                        ProjectListItemView(project: project)
                 }
-                
             }
             .listStyle(.sidebar)
         }

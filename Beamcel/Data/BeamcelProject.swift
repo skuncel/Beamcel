@@ -9,13 +9,15 @@ import Foundation
 import SwiftData
 
 @Model
-final class RequestCollection {
+final class BeamcelProject {
     
     var name: String
-    var stories: [RequestCollectionStory]
+    var desc: String
+    var stories: [BeamcelStory]
     
     init() {
-        self.name = "Default"
+        self.name = "Default name"
+        self.desc = "Default description"
         self.stories = []
     }
     

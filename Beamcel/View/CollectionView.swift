@@ -14,9 +14,9 @@ struct CollectionView: View {
     private let log = Logger(label: "CollectionView")
     
     @Environment(\.modelContext) private var modelContext
-    @Bindable var collection: RequestCollection
+    @Bindable var collection: BeamcelProject
     
-    @State private var selectedStory: RequestCollectionStory?
+    @State private var selectedStory: BeamcelStory?
     @State private var selectedRequest: HttpRequest?
     @State private var isCreateStorySheetPresented = false
     @State private var isCreateRequestSheetPresented = false
@@ -26,10 +26,10 @@ struct CollectionView: View {
         NavigationSplitView {
             Picker("Story", selection: $selectedStory) {
                 if(collection.stories.isEmpty) {
-                    Text("No story, create one").tag(RequestCollectionStory?.none)
+                    Text("No story, create one").tag(BeamcelStory?.none)
                 } else {
                     ForEach(collection.stories) { story in
-                        Text(story.name).tag(story as RequestCollectionStory?)
+                        Text(story.name).tag(story as BeamcelStory?)
                     }
                 }
             }.labelsHidden().padding(.horizontal)
@@ -70,7 +70,7 @@ struct CollectionView: View {
                 TextField("Story name", text: $newStoryName)
                     .padding(.bottom)
                 Button("Create story") {
-                    let newStory = RequestCollectionStory(name: newStoryName, requests: [])
+                    let newStory = BeamcelStory(name: newStoryName, requests: [])
                     collection.stories.append(newStory);
                     try? modelContext.save()
                     newStoryName = ""
@@ -94,8 +94,8 @@ struct CollectionView: View {
 
 #Preview {
     let previewHttpRequest = HttpRequest(name: "Test", secure: true, method: HTTPMethod.GET, path: "/test", host: "localhost", headers: Optional.none)
-    let previewRequestCollectionStory = RequestCollectionStory(name: "Preview story", requests: [previewHttpRequest])
-    let previewRequestCollection = RequestCollection()
+    let previewRequestCollectionStory = BeamcelStory(name: "Preview story", requests: [previewHttpRequest])
+    let previewRequestCollection = BeamcelProject()
     previewRequestCollection.stories.append(previewRequestCollectionStory)
-    return CollectionView(collection: RequestCollection())
+    return CollectionView(collection: BeamcelProject())
 }

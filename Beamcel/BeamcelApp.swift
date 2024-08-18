@@ -12,8 +12,8 @@ import SwiftData
 struct BeamcelApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            RequestCollection.self,
-            RequestCollectionStory.self,
+            BeamcelProject.self,
+            BeamcelStory.self,
             HttpRequest.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
@@ -26,15 +26,14 @@ struct BeamcelApp: App {
     }()
 
     var body: some Scene {
-        WindowGroup {
-            CollectionPickerView()
+        Group {
+            ProjectPickerScene()
         }
         .modelContainer(sharedModelContainer)
-        .windowStyle(.hiddenTitleBar)
         
-        WindowGroup(for: RequestCollection.ID.self) { $collectionId in
+        WindowGroup(for: BeamcelProject.ID.self) { $collectionId in
             if let undwrappedCollectionId = collectionId {
-                let collection = sharedModelContainer.mainContext.model(for: undwrappedCollectionId) as? RequestCollection
+                let collection = sharedModelContainer.mainContext.model(for: undwrappedCollectionId) as? BeamcelProject
                 if let unwrappedCollection = collection {
                     CollectionView(collection: unwrappedCollection)
                 }

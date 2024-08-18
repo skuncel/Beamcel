@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class RequestCollectionStory {
+final class BeamcelStory {
     
     @Attribute(.unique) let id: UUID
     var name: String

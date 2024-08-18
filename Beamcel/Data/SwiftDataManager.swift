@@ -8,8 +8,8 @@
 import Foundation
 
 class SwiftDataManager: DataManager {
-    func getRequestCollection(id: String) -> RequestCollection {
-        return RequestCollection()
+    func getRequestCollection(id: String) -> BeamcelProject {
+        return BeamcelProject()
     }
     
     func createRequestCollectionStory(name: String) {

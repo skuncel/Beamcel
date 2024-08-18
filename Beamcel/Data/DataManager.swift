@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DataManager {
-    func getRequestCollection(id: String) -> RequestCollection
+    func getRequestCollection(id: String) -> BeamcelProject
     func createRequestCollectionStory(name: String)
     func createHttpRequest()
 }

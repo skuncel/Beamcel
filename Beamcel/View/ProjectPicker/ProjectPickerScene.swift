@@ -67,3 +67,8 @@ struct ProjectPickerScene: Scene {
         }
     }
 }
+
+#Preview {
+    @State var projects = [BeamcelProject()]
+    return ProjectPickerScene.ProjectPickerView(existingProjects: projects)
+}

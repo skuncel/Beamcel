@@ -31,6 +31,12 @@ struct BeamcelApp: App {
         }
         .modelContainer(sharedModelContainer)
         
+        #if os(macOS)
+        Settings {
+            SettingsView()
+        }
+        #endif
+        
         WindowGroup(for: BeamcelProject.ID.self) { $collectionId in
             if let undwrappedCollectionId = collectionId {
                 let collection = sharedModelContainer.mainContext.model(for: undwrappedCollectionId) as? BeamcelProject
@@ -38,7 +44,6 @@ struct BeamcelApp: App {
                     CollectionView(collection: unwrappedCollection)
                 }
             }
-            
         }
     }
 }

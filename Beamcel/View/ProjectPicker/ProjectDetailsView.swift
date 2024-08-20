@@ -11,6 +11,8 @@ struct ProjectDetailsView: View {
     
     @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.openWindow) var openWindow
+    @Environment(\.dismiss) var dismiss
     @Bindable var project: BeamcelProject
     @Binding var projectEditorSheetShown: Bool
     
@@ -40,7 +42,10 @@ struct ProjectDetailsView: View {
                         iconName: "plus",
                         title: "Open project",
                         color: .teal,
-                        action: {}
+                        action: {
+                            openWindow(value: project.id)
+                            dismiss()
+                        }
                     )
                     ProjectActionButtonView(
                         iconName: "pencil",

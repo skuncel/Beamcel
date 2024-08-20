@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */; };
-		BB9E9FFB2C6BF9560044F0F5 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FFA2C6BF9560044F0F5 /* CollectionView.swift */; };
 		BB9E9FFF2C6BF9570044F0F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */; };
 		BB9EA0022C6BF9570044F0F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9EA0012C6BF9570044F0F5 /* Preview Assets.xcassets */; };
 		BB9EA00D2C6BF9570044F0F5 /* BeamcelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA00C2C6BF9570044F0F5 /* BeamcelTests.swift */; };
@@ -21,9 +20,7 @@
 		BBEBE40E2C6E9321004A6DFD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE40D2C6E9321004A6DFD /* DataManager.swift */; };
 		BBEBE4102C6E9407004A6DFD /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE40F2C6E9407004A6DFD /* SwiftDataManager.swift */; };
 		BBEBE4122C6E946C004A6DFD /* HttpRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4112C6E946C004A6DFD /* HttpRequestDispatcher.swift */; };
-		BBEBE4142C6E9615004A6DFD /* HttpRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4132C6E9615004A6DFD /* HttpRequestView.swift */; };
 		BBEBE41A2C6EC990004A6DFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BBEBE4192C6EC990004A6DFD /* README.md */; };
-		BBEBE41F2C700A00004A6DFD /* RequesWizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE41E2C700A00004A6DFD /* RequesWizardView.swift */; };
 		BBEBE4222C715093004A6DFD /* ProjectPickerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4212C715093004A6DFD /* ProjectPickerScene.swift */; };
 		BBEBE4242C715BE5004A6DFD /* NoProjectChoosenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4232C715BE5004A6DFD /* NoProjectChoosenView.swift */; };
 		BBEBE4262C715C5E004A6DFD /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4252C715C5E004A6DFD /* ProjectListView.swift */; };
@@ -35,6 +32,7 @@
 		BBEBE4332C73CAB7004A6DFD /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4322C73CAB7004A6DFD /* GeneralSettingsView.swift */; };
 		BBEBE4352C73CE8B004A6DFD /* HttpClientSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4342C73CE8B004A6DFD /* HttpClientSettingsProtocol.swift */; };
 		BBEBE4372C73CEAF004A6DFD /* HttpClientSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4362C73CEAF004A6DFD /* HttpClientSettingsView.swift */; };
+		BBEBE43A2C74FF9C004A6DFD /* WorkbenchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4392C74FF9C004A6DFD /* WorkbenchScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +55,6 @@
 /* Begin PBXFileReference section */
 		BB9E9FF52C6BF9560044F0F5 /* Beamcel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beamcel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelApp.swift; sourceTree = "<group>"; };
-		BB9E9FFA2C6BF9560044F0F5 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB9EA0012C6BF9570044F0F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB9EA0032C6BF9570044F0F5 /* Beamcel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beamcel.entitlements; sourceTree = "<group>"; };
@@ -72,10 +69,8 @@
 		BBEBE40D2C6E9321004A6DFD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BBEBE40F2C6E9407004A6DFD /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		BBEBE4112C6E946C004A6DFD /* HttpRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestDispatcher.swift; sourceTree = "<group>"; };
-		BBEBE4132C6E9615004A6DFD /* HttpRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestView.swift; sourceTree = "<group>"; };
 		BBEBE4192C6EC990004A6DFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBEBE41D2C6FEAEB004A6DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		BBEBE41E2C700A00004A6DFD /* RequesWizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesWizardView.swift; sourceTree = "<group>"; };
 		BBEBE4212C715093004A6DFD /* ProjectPickerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPickerScene.swift; sourceTree = "<group>"; };
 		BBEBE4232C715BE5004A6DFD /* NoProjectChoosenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoProjectChoosenView.swift; sourceTree = "<group>"; };
 		BBEBE4252C715C5E004A6DFD /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -87,6 +82,7 @@
 		BBEBE4322C73CAB7004A6DFD /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		BBEBE4342C73CE8B004A6DFD /* HttpClientSettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSettingsProtocol.swift; sourceTree = "<group>"; };
 		BBEBE4362C73CEAF004A6DFD /* HttpClientSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSettingsView.swift; sourceTree = "<group>"; };
+		BBEBE4392C74FF9C004A6DFD /* WorkbenchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,11 +196,9 @@
 		BBEBE40C2C6C14AC004A6DFD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BBEBE4382C74FF66004A6DFD /* Workbench */,
 				BBEBE42F2C73A355004A6DFD /* Settings */,
 				BBEBE4202C71507F004A6DFD /* ProjectPicker */,
-				BB9E9FFA2C6BF9560044F0F5 /* CollectionView.swift */,
-				BBEBE4132C6E9615004A6DFD /* HttpRequestView.swift */,
-				BBEBE41E2C700A00004A6DFD /* RequesWizardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +225,14 @@
 				BBEBE4322C73CAB7004A6DFD /* GeneralSettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		BBEBE4382C74FF66004A6DFD /* Workbench */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBE4392C74FF9C004A6DFD /* WorkbenchScene.swift */,
+			);
+			path = Workbench;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,12 +373,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBEBE42A2C716D8C004A6DFD /* ProjectListItemView.swift in Sources */,
-				BB9E9FFB2C6BF9560044F0F5 /* CollectionView.swift in Sources */,
 				BBEBE4242C715BE5004A6DFD /* NoProjectChoosenView.swift in Sources */,
 				BBEBE4102C6E9407004A6DFD /* SwiftDataManager.swift in Sources */,
 				BBEBE42C2C71757E004A6DFD /* ProjectDetailsView.swift in Sources */,
 				BBEBE4282C71661D004A6DFD /* ProjectActionButtonView.swift in Sources */,
-				BBEBE4142C6E9615004A6DFD /* HttpRequestView.swift in Sources */,
 				BBEBE40E2C6E9321004A6DFD /* DataManager.swift in Sources */,
 				BBEBE4082C6C0591004A6DFD /* HttpRequest.swift in Sources */,
 				BBEBE4372C73CEAF004A6DFD /* HttpClientSettingsView.swift in Sources */,
@@ -388,8 +388,8 @@
 				BBEBE42E2C717FFC004A6DFD /* ProjectEditorView.swift in Sources */,
 				BBEBE4262C715C5E004A6DFD /* ProjectListView.swift in Sources */,
 				BBEBE4312C73A369004A6DFD /* SettingsView.swift in Sources */,
-				BBEBE41F2C700A00004A6DFD /* RequesWizardView.swift in Sources */,
 				BBEBE4352C73CE8B004A6DFD /* HttpClientSettingsProtocol.swift in Sources */,
+				BBEBE43A2C74FF9C004A6DFD /* WorkbenchScene.swift in Sources */,
 				BBEBE4062C6C03C0004A6DFD /* BeamcelStory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@ final class BeamcelStory {
     
     @Attribute(.unique) let id: UUID
     var name: String
+    @Relationship(deleteRule: .cascade)
     var requests: [HttpRequest]
     
     init(name: String, requests: [HttpRequest]?) {

@@ -33,6 +33,7 @@
 		BBEBE4352C73CE8B004A6DFD /* HttpClientSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4342C73CE8B004A6DFD /* HttpClientSettingsProtocol.swift */; };
 		BBEBE4372C73CEAF004A6DFD /* HttpClientSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4362C73CEAF004A6DFD /* HttpClientSettingsView.swift */; };
 		BBEBE43A2C74FF9C004A6DFD /* WorkbenchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4392C74FF9C004A6DFD /* WorkbenchScene.swift */; };
+		BBEBE43D2C751BD4004A6DFD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BBEBE43C2C751BD4004A6DFD /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		BBEBE4342C73CE8B004A6DFD /* HttpClientSettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSettingsProtocol.swift; sourceTree = "<group>"; };
 		BBEBE4362C73CEAF004A6DFD /* HttpClientSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSettingsView.swift; sourceTree = "<group>"; };
 		BBEBE4392C74FF9C004A6DFD /* WorkbenchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchScene.swift; sourceTree = "<group>"; };
+		BBEBE43C2C751BD4004A6DFD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		BB9E9FF72C6BF9560044F0F5 /* Beamcel */ = {
 			isa = PBXGroup;
 			children = (
+				BBEBE43B2C751BC4004A6DFD /* Assets */,
 				BBEBE41D2C6FEAEB004A6DFD /* Info.plist */,
 				BBEBE40C2C6C14AC004A6DFD /* View */,
 				BBEBE4022C6C0312004A6DFD /* Data */,
@@ -235,6 +238,14 @@
 			path = Workbench;
 			sourceTree = "<group>";
 		};
+		BBEBE43B2C751BC4004A6DFD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBE43C2C751BD4004A6DFD /* Localizable.xcstrings */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +335,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = BB9E9FEC2C6BF9560044F0F5;
 			packageReferences = (
@@ -345,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEBE43D2C751BD4004A6DFD /* Localizable.xcstrings in Resources */,
 				BBEBE41A2C6EC990004A6DFD /* README.md in Resources */,
 				BB9EA0022C6BF9570044F0F5 /* Preview Assets.xcassets in Resources */,
 				BB9E9FFF2C6BF9570044F0F5 /* Assets.xcassets in Resources */,

@@ -34,6 +34,10 @@
 		BBEBE4372C73CEAF004A6DFD /* HttpClientSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4362C73CEAF004A6DFD /* HttpClientSettingsView.swift */; };
 		BBEBE43A2C74FF9C004A6DFD /* WorkbenchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4392C74FF9C004A6DFD /* WorkbenchScene.swift */; };
 		BBEBE43D2C751BD4004A6DFD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BBEBE43C2C751BD4004A6DFD /* Localizable.xcstrings */; };
+		BBEBE43F2C76545B004A6DFD /* HttpRequestListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE43E2C76545B004A6DFD /* HttpRequestListItemView.swift */; };
+		BBEBE4412C766455004A6DFD /* WorkbenchNavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4402C766455004A6DFD /* WorkbenchNavigatorView.swift */; };
+		BBEBE4442C766F1E004A6DFD /* ProjectMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */; };
+		BBEBE4462C767061004A6DFD /* StoryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4452C767061004A6DFD /* StoryMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		BBEBE4362C73CEAF004A6DFD /* HttpClientSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSettingsView.swift; sourceTree = "<group>"; };
 		BBEBE4392C74FF9C004A6DFD /* WorkbenchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchScene.swift; sourceTree = "<group>"; };
 		BBEBE43C2C751BD4004A6DFD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		BBEBE43E2C76545B004A6DFD /* HttpRequestListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestListItemView.swift; sourceTree = "<group>"; };
+		BBEBE4402C766455004A6DFD /* WorkbenchNavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchNavigatorView.swift; sourceTree = "<group>"; };
+		BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMenu.swift; sourceTree = "<group>"; };
+		BBEBE4452C767061004A6DFD /* StoryMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +207,7 @@
 		BBEBE40C2C6C14AC004A6DFD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BBEBE4422C766EFE004A6DFD /* Menu */,
 				BBEBE4382C74FF66004A6DFD /* Workbench */,
 				BBEBE42F2C73A355004A6DFD /* Settings */,
 				BBEBE4202C71507F004A6DFD /* ProjectPicker */,
@@ -234,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				BBEBE4392C74FF9C004A6DFD /* WorkbenchScene.swift */,
+				BBEBE43E2C76545B004A6DFD /* HttpRequestListItemView.swift */,
+				BBEBE4402C766455004A6DFD /* WorkbenchNavigatorView.swift */,
 			);
 			path = Workbench;
 			sourceTree = "<group>";
@@ -244,6 +255,15 @@
 				BBEBE43C2C751BD4004A6DFD /* Localizable.xcstrings */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		BBEBE4422C766EFE004A6DFD /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */,
+				BBEBE4452C767061004A6DFD /* StoryMenu.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,8 +409,10 @@
 				BBEBE4242C715BE5004A6DFD /* NoProjectChoosenView.swift in Sources */,
 				BBEBE4102C6E9407004A6DFD /* SwiftDataManager.swift in Sources */,
 				BBEBE42C2C71757E004A6DFD /* ProjectDetailsView.swift in Sources */,
+				BBEBE4442C766F1E004A6DFD /* ProjectMenu.swift in Sources */,
 				BBEBE4282C71661D004A6DFD /* ProjectActionButtonView.swift in Sources */,
 				BBEBE40E2C6E9321004A6DFD /* DataManager.swift in Sources */,
+				BBEBE4412C766455004A6DFD /* WorkbenchNavigatorView.swift in Sources */,
 				BBEBE4082C6C0591004A6DFD /* HttpRequest.swift in Sources */,
 				BBEBE4372C73CEAF004A6DFD /* HttpClientSettingsView.swift in Sources */,
 				BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */,
@@ -400,6 +422,8 @@
 				BBEBE4222C715093004A6DFD /* ProjectPickerScene.swift in Sources */,
 				BBEBE42E2C717FFC004A6DFD /* ProjectEditorView.swift in Sources */,
 				BBEBE4262C715C5E004A6DFD /* ProjectListView.swift in Sources */,
+				BBEBE43F2C76545B004A6DFD /* HttpRequestListItemView.swift in Sources */,
+				BBEBE4462C767061004A6DFD /* StoryMenu.swift in Sources */,
 				BBEBE4312C73A369004A6DFD /* SettingsView.swift in Sources */,
 				BBEBE4352C73CE8B004A6DFD /* HttpClientSettingsProtocol.swift in Sources */,
 				BBEBE43A2C74FF9C004A6DFD /* WorkbenchScene.swift in Sources */,

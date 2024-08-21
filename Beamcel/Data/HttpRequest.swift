@@ -34,5 +34,5 @@ final class HttpRequest {
 }
 
 enum HTTPMethod: Codable {
-    case GET
+    case GET, POST, PUT, DELETE
 }

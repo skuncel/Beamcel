@@ -1,6 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
     "Beamcel" : {
       "localizations" : {
         "de" : {
@@ -81,6 +91,16 @@
         }
       }
     },
+    "GET" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GET"
+          }
+        }
+      }
+    },
     "HTTP Client" : {
       "localizations" : {
         "de" : {
@@ -100,6 +120,29 @@
           }
         }
       }
+    },
+    "New HTTP request" : {
+
+    },
+    "New Story" : {
+
+    },
+    "No stories" : {
+
+    },
+    "No Stories" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Stories"
+          }
+        }
+      }
+    },
+    "Project" : {
+
     },
     "Project: %@" : {
       "localizations" : {
@@ -138,6 +181,16 @@
         }
       }
     },
+    "Run" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausführen"
+          }
+        }
+      }
+    },
     "Save" : {
       "localizations" : {
         "de" : {
@@ -167,6 +220,9 @@
           }
         }
       }
+    },
+    "Story" : {
+
     },
     "Validate TLS certificates" : {
       "localizations" : {

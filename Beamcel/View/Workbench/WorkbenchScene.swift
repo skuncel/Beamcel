@@ -29,7 +29,20 @@ struct WorkbenchScene: Scene {
         
         var body: some View {
             NavigationSplitView() {
-                
+                WorkbenchNavigatorView(project: project)
+                .toolbar {
+                    ToolbarItemGroup {
+                        VStack {
+                            Button(action: {}) {
+                                Label("Run", systemImage: "play.fill")
+                            }
+                        }
+                    }
+                }
+                .contextMenu(ContextMenu(menuItems: {
+                    ProjectMenu()
+                    StoryMenu()
+                }))
             } detail: {
                 Text("Project: \(project?.name ?? "unavailable")")
             }.onAppear {
@@ -40,5 +53,8 @@ struct WorkbenchScene: Scene {
 }
 
 //#Preview {
-//    WorkbenchScene.WorkbenchView()
+//    @Environment(\.modelContext) var modelContext;
+//    @State var project = BeamcelProject();
+//    modelContext.insert(project);
+//    return WorkbenchScene.WorkbenchView(projectId: project.id)
 //}

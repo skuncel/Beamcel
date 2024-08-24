@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct WorkbenchNavigatorView: View {
-    @Bindable var project: BeamcelProject
+    @Environment(\.modelContext)    var modelContext
+    @Binding                        var project: BeamcelProject
+    @State                          private var showStoryEditor: Bool = false
+    @State                          private var selectedStory: BeamcelStory = BeamcelStory(name: "New story", desc: "", requests: .none)
     
     var body: some View {
-        if project.stories.isEmpty == false {
-            List {
+        List {
+            if project.stories.isEmpty == false {
                 ForEach(project.stories) { story in
                     Section("\(story.name)") {
                         ForEach(story.requests) { request in
@@ -20,19 +23,27 @@ struct WorkbenchNavigatorView: View {
                         }
                     }
                 }
-            }
-        } else {
-            VStack {
-                HStack {
+            } else {
+                VStack {
                     Image(systemName: "xmark.circle")
                     Text("No stories, create one:")
+                    Button("New story") {
+                        showStoryEditor.toggle()
+                    }
                 }
-                Button("New story") {}
             }
+        }.sheet(isPresented: $showStoryEditor, content: {
+            StoryEditorView(story: $selectedStory)
+                .frame(width: 300, height: 150)
+        }).onDisappear {
+            modelContext.insert(selectedStory)
+            project.stories.append(selectedStory)
+            try? modelContext.save()
         }
     }
 }
 
 //#Preview {
-//    WorkbenchNavigatorView()
+//    @Binding var project = BeamcelProject()
+//    WorkbenchNavigatorView(project: BeamcelProject())
 //}

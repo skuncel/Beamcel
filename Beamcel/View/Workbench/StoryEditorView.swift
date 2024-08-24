@@ -9,26 +9,39 @@ import SwiftUI
 
 struct StoryEditorView: View {
     
-    @Environment(\.dismiss)         private var dismiss
-    @Environment(\.modelContext)    private var modelContext
-    @Binding                        var story: BeamcelStory
+    @Environment(\.dismiss) private var dismiss
+    @Binding                var story: BeamcelStory
+    @State                  private var storyName = "New story"
+    @State                  private var storyDesc = "Description"
     
     var body: some View {
-        Text("Edit story")
-            .font(.largeTitle)
-        Form {
-            TextField("Name", text: $story.name)
-            TextField("Description", text: $story.desc)
-        }.formStyle(.grouped)
-        HStack {
-            Button("Cancel") {
-                dismiss()
+        NavigationStack {
+            Form {
+                TextField("Name", text: $storyName)
+                TextEditor(text: $storyDesc)
+            }.padding()
+        }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Edit story")
             }
-            Button("Save") {
-                try? modelContext.save()
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save") {
+                    withAnimation {
+                        story.name = storyName
+                        story.desc = storyDesc
+                        dismiss()
+                    }
+                }
+            }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") {
+                    withAnimation {
+                        dismiss()
+                    }
+                }
             }
         }
-        .padding()
     }
 }
 

@@ -36,7 +36,6 @@
 		BBEBE4442C766F1E004A6DFD /* ProjectMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */; };
 		BBEBE4462C767061004A6DFD /* StoryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4452C767061004A6DFD /* StoryMenu.swift */; };
 		BBEBE44B2C779D25004A6DFD /* StoryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */; };
-		BBF2EBAD2C77BD630070F473 /* WorkbenchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2EBAC2C77BD630070F473 /* WorkbenchState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +89,6 @@
 		BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMenu.swift; sourceTree = "<group>"; };
 		BBEBE4452C767061004A6DFD /* StoryMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMenu.swift; sourceTree = "<group>"; };
 		BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEditorView.swift; sourceTree = "<group>"; };
-		BBF2EBAC2C77BD630070F473 /* WorkbenchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,7 +239,6 @@
 				BBEBE43E2C76545B004A6DFD /* HttpRequestListItemView.swift */,
 				BBEBE4402C766455004A6DFD /* WorkbenchNavigatorView.swift */,
 				BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */,
-				BBF2EBAC2C77BD630070F473 /* WorkbenchState.swift */,
 			);
 			path = Workbench;
 			sourceTree = "<group>";
@@ -404,7 +401,6 @@
 			files = (
 				BBEBE42A2C716D8C004A6DFD /* ProjectListItemView.swift in Sources */,
 				BBEBE4242C715BE5004A6DFD /* NoProjectChoosenView.swift in Sources */,
-				BBF2EBAD2C77BD630070F473 /* WorkbenchState.swift in Sources */,
 				BBEBE44B2C779D25004A6DFD /* StoryEditorView.swift in Sources */,
 				BBEBE42C2C71757E004A6DFD /* ProjectDetailsView.swift in Sources */,
 				BBEBE4442C766F1E004A6DFD /* ProjectMenu.swift in Sources */,

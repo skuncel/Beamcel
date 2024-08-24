@@ -39,7 +39,7 @@ struct ProjectDetailsView: View {
             HStack {
                 VStack(spacing: 8) {
                     ProjectActionButtonView(
-                        iconName: "plus",
+                        iconName: "folder",
                         title: "Open project",
                         color: .teal,
                         action: {

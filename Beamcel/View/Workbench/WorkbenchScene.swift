@@ -25,7 +25,7 @@ struct WorkbenchScene: Scene {
 
         var body: some View {
             NavigationSplitView() {
-                WorkbenchNavigatorView(project: openedProject)
+                WorkbenchNavigatorView(project: $openedProject)
                 .toolbar {
                     ToolbarItemGroup {
                         VStack {

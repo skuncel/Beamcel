@@ -32,14 +32,16 @@ struct WorkbenchNavigatorView: View {
                     }
                 }
             }
-        }.sheet(isPresented: $showStoryEditor, content: {
-            StoryEditorView(story: $selectedStory)
-                .frame(width: 300, height: 150)
-        }).onDisappear {
-            modelContext.insert(selectedStory)
-            project.stories.append(selectedStory)
-            try? modelContext.save()
-        }
+        }.sheet(isPresented: $showStoryEditor, 
+                onDismiss: {
+                    modelContext.insert(selectedStory)
+                    project.stories.append(selectedStory)
+                    try? modelContext.save()
+                },
+                content: {
+                    StoryEditorView(story: $selectedStory)
+                    .frame(width: 300, height: 150)
+        })
     }
 }
 

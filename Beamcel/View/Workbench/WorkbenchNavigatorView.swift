@@ -12,27 +12,19 @@ struct WorkbenchNavigatorView: View {
     @Binding                        var project: BeamcelProject
     @State                          private var showStoryEditor: Bool = false
     @State                          private var selectedStory: BeamcelStory = BeamcelStory(name: "New story", desc: "", requests: .none)
+    @State                          private var navigatorItems: [WorkbenchNavigatorItem] = []
+    @State                          private var selectedNavigatorItem: WorkbenchNavigatorItem?
     
     var body: some View {
-        List {
-            if project.stories.isEmpty == false {
-                ForEach(project.stories) { story in
-                    Section("\(story.name)") {
-                        ForEach(story.requests) { request in
-                            HttpRequestListItemView(httpRequest: request)
-                        }
-                    }
-                }
-            } else {
-                VStack {
-                    Image(systemName: "xmark.circle")
-                    Text("No stories, create one:")
-                    Button("New story") {
-                        showStoryEditor.toggle()
-                    }
-                }
+        List(navigatorItems, children: \.children, selection: $selectedNavigatorItem) { item in
+            switch item.type {
+            case .story: HStack {
+                Image(systemName: "book.pages")
+                Text(item.story!.name)
+            }.tag(item).lineLimit(1)
+            case .httpRequest: HttpRequestListItemView(httpRequest: item.httpRequest!).tag(item)
             }
-        }.sheet(isPresented: $showStoryEditor, 
+        }.sheet(isPresented: $showStoryEditor,
                 onDismiss: {
                     modelContext.insert(selectedStory)
                     project.stories.append(selectedStory)
@@ -41,7 +33,16 @@ struct WorkbenchNavigatorView: View {
                 content: {
                     StoryEditorView(story: $selectedStory)
                     .frame(width: 300, height: 150)
-        })
+        }).onAppear {
+            project.stories.forEach { story in
+                let navItem = WorkbenchNavigatorItem(story: story)
+                story.requests.forEach { httpRequest in
+                    let childNavItem = WorkbenchNavigatorItem(httpRequest: httpRequest)
+                    navItem.appendChild(child: childNavItem)
+                }
+                navigatorItems.append(navItem)
+            }
+        }
     }
 }
 

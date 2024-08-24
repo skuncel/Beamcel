@@ -36,6 +36,7 @@
 		BBEBE4442C766F1E004A6DFD /* ProjectMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */; };
 		BBEBE4462C767061004A6DFD /* StoryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4452C767061004A6DFD /* StoryMenu.swift */; };
 		BBEBE44B2C779D25004A6DFD /* StoryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */; };
+		BBF2EBAF2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2EBAE2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMenu.swift; sourceTree = "<group>"; };
 		BBEBE4452C767061004A6DFD /* StoryMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMenu.swift; sourceTree = "<group>"; };
 		BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEditorView.swift; sourceTree = "<group>"; };
+		BBF2EBAE2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchNavigatorItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 				BBEBE43E2C76545B004A6DFD /* HttpRequestListItemView.swift */,
 				BBEBE4402C766455004A6DFD /* WorkbenchNavigatorView.swift */,
 				BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */,
+				BBF2EBAE2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift */,
 			);
 			path = Workbench;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				BBEBE4332C73CAB7004A6DFD /* GeneralSettingsView.swift in Sources */,
 				BBEBE4122C6E946C004A6DFD /* HttpRequestDispatcher.swift in Sources */,
 				BBEBE4222C715093004A6DFD /* ProjectPickerScene.swift in Sources */,
+				BBF2EBAF2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift in Sources */,
 				BBEBE42E2C717FFC004A6DFD /* ProjectEditorView.swift in Sources */,
 				BBEBE4262C715C5E004A6DFD /* ProjectListView.swift in Sources */,
 				BBEBE43F2C76545B004A6DFD /* HttpRequestListItemView.swift in Sources */,

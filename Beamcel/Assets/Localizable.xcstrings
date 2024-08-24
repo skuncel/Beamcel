@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -135,6 +136,7 @@
       }
     },
     "New story" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -166,6 +168,7 @@
       }
     },
     "No stories, create one:" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

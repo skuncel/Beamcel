@@ -9,27 +9,23 @@ import SwiftUI
 import SwiftData
 
 struct WorkbenchScene: Scene {
+    @Environment(\.modelContext) var modelContext;
+    
     var body: some Scene {
         WindowGroup("Beamcel", for: BeamcelProject.ID.self) { $projectId in
             if let unwrappedProjectId = projectId {
-                WorkbenchView(projectId: unwrappedProjectId)
+                let queriedProject = modelContext.model(for: unwrappedProjectId) as! BeamcelProject
+                WorkbenchView(openedProject: queriedProject)
             }
         }
     }
     
     struct WorkbenchView: View {
-        
-        @Environment(\.modelContext) var modelContext
-        private let projectId: PersistentIdentifier
-        @State var project: BeamcelProject?
-        
-        init(projectId: PersistentIdentifier) {
-            self.projectId = projectId
-        }
-        
+        @State var openedProject: BeamcelProject
+
         var body: some View {
             NavigationSplitView() {
-                WorkbenchNavigatorView(project: project)
+                WorkbenchNavigatorView(project: openedProject)
                 .toolbar {
                     ToolbarItemGroup {
                         VStack {
@@ -44,17 +40,12 @@ struct WorkbenchScene: Scene {
                     StoryMenu()
                 }))
             } detail: {
-                Text("Project: \(project?.name ?? "unavailable")")
-            }.onAppear {
-                project = modelContext.model(for: projectId) as? BeamcelProject
+                Text("Project: \(openedProject.name)")
             }
         }
     }
 }
 
-//#Preview {
-//    @Environment(\.modelContext) var modelContext;
-//    @State var project = BeamcelProject();
-//    modelContext.insert(project);
-//    return WorkbenchScene.WorkbenchView(projectId: project.id)
-//}
+#Preview {
+    WorkbenchScene.WorkbenchView(openedProject: BeamcelProject())
+}

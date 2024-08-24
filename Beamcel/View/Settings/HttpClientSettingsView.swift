@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HttpClientSettingsView: View, HttpClientSettings {
+struct HttpClientSettingsView: View {
     
     @AppStorage("validateTlsCerts") private var validateTlsCerts = true
     @AppStorage("storeCookies") private var storeCookies = false

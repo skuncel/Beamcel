@@ -61,6 +61,9 @@
         }
       }
     },
+    "Edit story" : {
+
+    },
     "Follow redirects" : {
       "localizations" : {
         "de" : {
@@ -122,13 +125,34 @@
       }
     },
     "New HTTP request" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neue HTTP-Anfrage"
+          }
+        }
+      }
+    },
+    "New story" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Story erstellen"
+          }
+        }
+      }
     },
     "New Story" : {
-
-    },
-    "No stories" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Story erstellen"
+          }
+        }
+      }
     },
     "No Stories" : {
       "extractionState" : "stale",
@@ -141,8 +165,25 @@
         }
       }
     },
+    "No stories, create one:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Stories, erstelle eine:"
+          }
+        }
+      }
+    },
     "Project" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Projekt"
+          }
+        }
+      }
     },
     "Project: %@" : {
       "localizations" : {
@@ -222,7 +263,14 @@
       }
     },
     "Story" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Story"
+          }
+        }
+      }
     },
     "Validate TLS certificates" : {
       "localizations" : {

@@ -10,7 +10,6 @@ import SwiftData
 
 @Model
 final class BeamcelProject {
-    
     var name: String
     var desc: String
     @Relationship(deleteRule: .cascade)

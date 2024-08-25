@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HttpRequestListItemView: View {
-    
     @Bindable var httpRequest: HttpRequest
     
     var body: some View {
@@ -16,23 +15,17 @@ struct HttpRequestListItemView: View {
             Label("GET", systemImage: "").labelStyle(PaddedBackgroundLabelStyle(httpMethod: $httpRequest.method))
             VStack {
                 VStack(alignment: .leading) {
-                    Text(httpRequest.name)
+                    Text(httpRequest.name ?? httpRequest.path)
                         .foregroundColor(.primary)
                         .font(.system(size: 12, weight: .semibold))
-                        .lineLimit(1)
-                    Text(httpRequest.path)
-                        .foregroundColor(.secondary)
-                        .font(.system(size: 10))
                         .lineLimit(1)
                         .truncationMode(.head)
                 }
             }
-            
-        }.padding()
+        }
     }
     
     struct PaddedBackgroundLabelStyle: LabelStyle {
-        
         @Binding var httpMethod: HTTPMethod;
         
         func makeBody(configuration: Configuration) -> some View {
@@ -43,10 +36,10 @@ struct HttpRequestListItemView: View {
                 case(.DELETE): Color(red: 0.976, green: 0.243, blue: 0.243, opacity: 1.0)
             }
             Label(configuration)
-                .font(.system(size: 13, weight: .semibold))
+                .font(.system(size: 10, weight: .semibold))
                 .foregroundColor(.white)
                 .labelStyle(.titleOnly)
-                .padding(5)
+                .padding(2.5)
                 .background(color)
                 .cornerRadius(5)
         }

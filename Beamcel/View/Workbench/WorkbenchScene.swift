@@ -35,10 +35,6 @@ struct WorkbenchScene: Scene {
                         }
                     }
                 }
-                .contextMenu(ContextMenu(menuItems: {
-                    ProjectMenu()
-                    StoryMenu()
-                }))
             } detail: {
                 Text("Project: \(openedProject.name)")
             }

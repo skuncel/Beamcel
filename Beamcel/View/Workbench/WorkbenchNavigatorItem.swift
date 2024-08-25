@@ -11,20 +11,29 @@ import Foundation
 class WorkbenchNavigatorItem: Identifiable, Hashable {
     let uuid = UUID()
     let type: WorkbenchNavigatorItemType
+    let project: BeamcelProject?
     let story: BeamcelStory?
     let httpRequest: HttpRequest?
     var children: [WorkbenchNavigatorItem]?
     
+    init(project: BeamcelProject) {
+        self.project = project
+        type = .project
+        story = .none
+        httpRequest = .none
+    }
     
     init(story: BeamcelStory) {
         self.story = story
         type = .story
+        project = .none
         httpRequest = .none
     }
     
     init(httpRequest: HttpRequest) {
         self.httpRequest = httpRequest
         type = .httpRequest
+        project = .none
         story = .none
     }
     
@@ -37,6 +46,8 @@ class WorkbenchNavigatorItem: Identifiable, Hashable {
     
     func hash(into hasher: inout Hasher) {
         switch type {
+        case .project:
+            hasher.combine(project!)
         case .story:
             hasher.combine(story!)
         case .httpRequest:
@@ -50,5 +61,5 @@ class WorkbenchNavigatorItem: Identifiable, Hashable {
 }
 
 enum WorkbenchNavigatorItemType {
-    case story, httpRequest
+    case project, story, httpRequest
 }

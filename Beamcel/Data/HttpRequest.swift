@@ -10,10 +10,7 @@ import SwiftData
 
 @Model
 final class HttpRequest {
-    
-    @Attribute(.unique) let id: UUID
-    var name: String
-    
+    var name: String?
     var secure: Bool
     var method: HTTPMethod
     var path: String
@@ -22,7 +19,6 @@ final class HttpRequest {
     
     init(name: String, secure: Bool, method: HTTPMethod, path: String, host: String,
          headers: Dictionary<String, String>?) {
-        id = UUID()
         self.name = name
         self.secure = secure
         self.method = method

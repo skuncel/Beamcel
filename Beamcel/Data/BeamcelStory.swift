@@ -10,15 +10,12 @@ import SwiftData
 
 @Model
 final class BeamcelStory {
-    
-    @Attribute(.unique) let id: UUID
     var name: String
     var desc: String
     @Relationship(deleteRule: .cascade)
     var requests: [HttpRequest]
     
     init(name: String, desc: String, requests: [HttpRequest]?) {
-        id = UUID()
         self.name = name
         self.desc = desc
         self.requests = requests ?? []

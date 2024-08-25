@@ -12,6 +12,12 @@
         }
       }
     },
+    "Add request" : {
+
+    },
+    "Add story" : {
+
+    },
     "Beamcel" : {
       "localizations" : {
         "de" : {
@@ -41,6 +47,12 @@
           }
         }
       }
+    },
+    "Delete request" : {
+
+    },
+    "Delete story" : {
+
     },
     "Description" : {
       "localizations" : {

@@ -80,7 +80,9 @@ struct WorkbenchNavigatorView: View {
     }
     
     func deleteHttpRequest() {
-        
+        modelContext.delete(selectedItem!)
+        selectedItem = selectedItem?.parent;
+        try? modelContext.save()
     }
     
 }

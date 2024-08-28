@@ -6,97 +6,81 @@
 //
 
 import SwiftUI
+import SwiftData
+import OrderedCollections
 
 struct WorkbenchNavigatorView: View {
     @Environment(\.modelContext)    var modelContext
     @Binding                        var project: BeamcelProject
+    @Binding                        var selectedItem : BeamcelItem?;
     @State                          private var showStoryEditor: Bool = false
-    @State                          private var selectedStory: BeamcelStory = BeamcelStory(name: "New story", desc: "", requests: .none)
-    @State                          private var navigatorItems: [WorkbenchNavigatorItem] = []
-    @State                          private var selectedNavigatorItem: WorkbenchNavigatorItem?
     
     var body: some View {
-        List(navigatorItems, children: \.children, selection: $selectedNavigatorItem) { item in
+        @State var projectItems = project.items;
+        List(projectItems, children: \.childs, selection: $selectedItem) { item in
             switch item.type {
-            case .project: HStack {
-                Image(systemName: "folder.fill")
-                Text(item.project!.name).font(.headline)
-            }.tag(item).lineLimit(1).truncationMode(.tail)
             case .story: HStack {
                 Image(systemName: "book.pages")
-                Text(item.story!.name)
+                Text(item.name)
             }.tag(item).lineLimit(1).truncationMode(.tail)
-            case .httpRequest: HttpRequestListItemView(httpRequest: item.httpRequest!).tag(item)
+            case .httpRequest: HttpRequestListItemView(httpRequestId: item.getContentRef()!).tag(item)
             }
         }.sheet(isPresented: $showStoryEditor,
                 onDismiss: {
-                    modelContext.insert(selectedStory)
-                    project.stories.append(selectedStory)
+                    modelContext.insert(selectedItem!)
+                    project.items.append(selectedItem!)
                     try? modelContext.save()
                 },
                 content: {
-                    StoryEditorView(story: $selectedStory)
-                    .frame(width: 300, height: 150)
-        }).onAppear {
-            let projectNavItem = WorkbenchNavigatorItem(project: project)
-            navigatorItems.append(projectNavItem)
-            project.stories.forEach { story in
-                let navItem = WorkbenchNavigatorItem(story: story)
-                story.requests.forEach { httpRequest in
-                    let childNavItem = WorkbenchNavigatorItem(httpRequest: httpRequest)
-                    navItem.appendChild(child: childNavItem)
-                }
-                navigatorItems.append(navItem)
-            }
-        }.contextMenu(menuItems: {
-            if selectedNavigatorItem != nil {
+                    Text("Test")
+        }).contextMenu(menuItems: {
+            if(selectedItem?.type == .story) {
                 Button("Add request", systemImage: "plus") {
-                    let httpRequest = HttpRequest(name: "Test", secure: false, method: .GET, path: "/review", host: "localhost", headers: .none)
-                    let childNavItem = WorkbenchNavigatorItem(httpRequest: httpRequest)
-                    selectedNavigatorItem?.appendChild(child: childNavItem)
+                    addHttpRequest()
                 }
-                if selectedNavigatorItem != nil && selectedNavigatorItem?.type == .httpRequest {
-                    Button("Delete request", systemImage: "trash", role: .destructive) { }
-                }
-                Divider()
             }
+            if(selectedItem?.type == .httpRequest) {
+                Button("Delete request", systemImage: "trash", role: .destructive) {
+                    deleteHttpRequest()
+                }
+            }
+            Divider()
             Button("Add story", systemImage: "plus") {
                 addStory()
             }
-            if selectedNavigatorItem != nil && selectedNavigatorItem?.type == .story {
+            if(selectedItem?.type == .story) {
                 Button("Delete story", systemImage: "trash", role: .destructive) {
-                    deleteStory()
+                        deleteStory()
                 }
             }
         })
     }
     
     func addStory() {
-        let newStory = BeamcelStory(name: "New story", desc: "", requests: [])
+        let newStory = BeamcelItem(name: "New story", desc: "", type: .story)
         modelContext.insert(newStory)
-        self.project.stories.append(newStory)
+        self.project.items.append(newStory)
         try? modelContext.save()
-        let newStoryNavItem = WorkbenchNavigatorItem(story: newStory);
-        self.navigatorItems.append(newStoryNavItem)
     }
     
     func deleteStory() {
-        if selectedNavigatorItem?.type == .story {
-            modelContext.delete(selectedNavigatorItem!.story!)
-        }
+        modelContext.delete(selectedItem!)
+        try? modelContext.save()
     }
     
     func addHttpRequest() {
-       
+        let httpRequest = HttpRequest(name: "New request", secure: true, method: .GET, path: "/path", host: "localhost", headers: .none)
+        modelContext.insert(httpRequest);
+        try! modelContext.save()
+        let newRequestItem = BeamcelItem(name: "New request", desc: "", type: .httpRequest)
+        newRequestItem.addContentRef(ref: httpRequest.id)
+        modelContext.insert(newRequestItem)
+        selectedItem?.childs?.append(newRequestItem);
+        try! modelContext.save()
     }
     
     func deleteHttpRequest() {
         
     }
     
-}
-
-#Preview {
-    @State var previewProject = BeamcelProject()
-    return WorkbenchNavigatorView(project: $previewProject)
 }

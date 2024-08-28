@@ -13,6 +13,8 @@ struct BeamcelApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             BeamcelProject.self,
+            BeamcelItem.self,
+            HttpRequest.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

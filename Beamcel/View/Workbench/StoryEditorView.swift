@@ -10,7 +10,7 @@ import SwiftUI
 struct StoryEditorView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @Binding                var story: BeamcelStory
+    @Binding                var story: BeamcelItem
     @State                  private var storyName = "New story"
     @State                  private var storyDesc = "Description"
     
@@ -46,6 +46,6 @@ struct StoryEditorView: View {
 }
 
 #Preview {
-    @State var story = BeamcelStory(name: "Preview", desc: "Preview", requests: .none)
+    @State var story = BeamcelItem(name: "Preview", desc: "Preview", type: .story)
     return StoryEditorView(story: $story)
 }

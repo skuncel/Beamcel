@@ -22,10 +22,11 @@ struct WorkbenchScene: Scene {
     
     struct WorkbenchView: View {
         @State var openedProject: BeamcelProject
+        @State var selectedItem: BeamcelItem?
 
         var body: some View {
             NavigationSplitView() {
-                WorkbenchNavigatorView(project: $openedProject)
+                WorkbenchNavigatorView(project: $openedProject, selectedItem: $selectedItem)
                 .toolbar {
                     ToolbarItemGroup {
                         VStack {
@@ -36,7 +37,7 @@ struct WorkbenchScene: Scene {
                     }
                 }
             } detail: {
-                Text("Project: \(openedProject.name)")
+                WorkbenchItemView(item: $selectedItem)
             }
         }
     }

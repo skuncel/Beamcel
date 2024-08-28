@@ -6,27 +6,35 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HttpRequestListItemView: View {
-    @Bindable var httpRequest: HttpRequest
+    @Environment(\.modelContext) var modelContext;
+    var httpRequestId: PersistentIdentifier
+    @State var httpRequest: HttpRequest?
     
     var body: some View {
         HStack() {
-            Label("GET", systemImage: "").labelStyle(PaddedBackgroundLabelStyle(httpMethod: $httpRequest.method))
-            VStack {
-                VStack(alignment: .leading) {
-                    Text(httpRequest.name ?? httpRequest.path)
-                        .foregroundColor(.primary)
-                        .font(.system(size: 12, weight: .semibold))
-                        .lineLimit(1)
-                        .truncationMode(.head)
+            if let unwrappedHttpRequest = httpRequest {
+                Label("GET", systemImage: "").labelStyle(PaddedBackgroundLabelStyle(httpMethod: unwrappedHttpRequest.method))
+                VStack {
+                    VStack(alignment: .leading) {
+                        Text(httpRequest!.name ?? httpRequest!.path)
+                            .foregroundColor(.primary)
+                            .font(.system(size: 12, weight: .semibold))
+                            .lineLimit(1)
+                            .truncationMode(.head)
+                    }
                 }
             }
+        }.onAppear() {
+            httpRequest = modelContext.model(for: httpRequestId) as? HttpRequest
+            httpRequestId.hashValue;
         }
     }
     
     struct PaddedBackgroundLabelStyle: LabelStyle {
-        @Binding var httpMethod: HTTPMethod;
+        var httpMethod: HTTPMethod;
         
         func makeBody(configuration: Configuration) -> some View {
             let color: Color = switch httpMethod {
@@ -44,9 +52,4 @@ struct HttpRequestListItemView: View {
                 .cornerRadius(5)
         }
     }
-}
-
-#Preview {
-    let httpRequest = HttpRequest(name: "Preview", secure: false, method: .GET, path: "/preview", host: "localhost", headers: .none)
-    return HttpRequestListItemView(httpRequest: httpRequest)
 }

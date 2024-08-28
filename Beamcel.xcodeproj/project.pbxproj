@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB17ADCF2C7E686E005A0CEF /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = BB17ADCE2C7E686E005A0CEF /* OrderedCollections */; };
+		BB17ADD12C7F859A005A0CEF /* BeamcelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17ADD02C7F859A005A0CEF /* BeamcelItem.swift */; };
+		BB17ADD32C7FAFFF005A0CEF /* WorkbenchItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17ADD22C7FAFFF005A0CEF /* WorkbenchItemView.swift */; };
 		BB9E9FF92C6BF9560044F0F5 /* BeamcelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */; };
 		BB9E9FFF2C6BF9570044F0F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */; };
 		BB9EA0022C6BF9570044F0F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9EA0012C6BF9570044F0F5 /* Preview Assets.xcassets */; };
@@ -15,7 +18,6 @@
 		BB9EA0192C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EA0182C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift */; };
 		BBEBE4002C6C010B004A6DFD /* AsyncHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = BBEBE3FF2C6C010B004A6DFD /* AsyncHTTPClient */; };
 		BBEBE4042C6C0349004A6DFD /* BeamcelProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4032C6C0349004A6DFD /* BeamcelProject.swift */; };
-		BBEBE4062C6C03C0004A6DFD /* BeamcelStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4052C6C03C0004A6DFD /* BeamcelStory.swift */; };
 		BBEBE4082C6C0591004A6DFD /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */; };
 		BBEBE4122C6E946C004A6DFD /* HttpRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4112C6E946C004A6DFD /* HttpRequestDispatcher.swift */; };
 		BBEBE41A2C6EC990004A6DFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BBEBE4192C6EC990004A6DFD /* README.md */; };
@@ -36,7 +38,6 @@
 		BBEBE4442C766F1E004A6DFD /* ProjectMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */; };
 		BBEBE4462C767061004A6DFD /* StoryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE4452C767061004A6DFD /* StoryMenu.swift */; };
 		BBEBE44B2C779D25004A6DFD /* StoryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */; };
-		BBF2EBAF2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2EBAE2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB17ADD02C7F859A005A0CEF /* BeamcelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelItem.swift; sourceTree = "<group>"; };
+		BB17ADD22C7FAFFF005A0CEF /* WorkbenchItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchItemView.swift; sourceTree = "<group>"; };
 		BB9E9FF52C6BF9560044F0F5 /* Beamcel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beamcel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9E9FF82C6BF9560044F0F5 /* BeamcelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelApp.swift; sourceTree = "<group>"; };
 		BB9E9FFE2C6BF9570044F0F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +71,6 @@
 		BB9EA0162C6BF9570044F0F5 /* BeamcelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelUITests.swift; sourceTree = "<group>"; };
 		BB9EA0182C6BF9570044F0F5 /* BeamcelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BBEBE4032C6C0349004A6DFD /* BeamcelProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelProject.swift; sourceTree = "<group>"; };
-		BBEBE4052C6C03C0004A6DFD /* BeamcelStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamcelStory.swift; sourceTree = "<group>"; };
 		BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		BBEBE4112C6E946C004A6DFD /* HttpRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestDispatcher.swift; sourceTree = "<group>"; };
 		BBEBE4192C6EC990004A6DFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -90,7 +92,6 @@
 		BBEBE4432C766F1E004A6DFD /* ProjectMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMenu.swift; sourceTree = "<group>"; };
 		BBEBE4452C767061004A6DFD /* StoryMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMenu.swift; sourceTree = "<group>"; };
 		BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEditorView.swift; sourceTree = "<group>"; };
-		BBF2EBAE2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchNavigatorItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB17ADCF2C7E686E005A0CEF /* OrderedCollections in Frameworks */,
 				BBEBE4002C6C010B004A6DFD /* AsyncHTTPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,8 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				BBEBE4032C6C0349004A6DFD /* BeamcelProject.swift */,
-				BBEBE4052C6C03C0004A6DFD /* BeamcelStory.swift */,
 				BBEBE4072C6C0591004A6DFD /* HttpRequest.swift */,
+				BB17ADD02C7F859A005A0CEF /* BeamcelItem.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -241,7 +243,7 @@
 				BBEBE43E2C76545B004A6DFD /* HttpRequestListItemView.swift */,
 				BBEBE4402C766455004A6DFD /* WorkbenchNavigatorView.swift */,
 				BBEBE44A2C779D25004A6DFD /* StoryEditorView.swift */,
-				BBF2EBAE2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift */,
+				BB17ADD22C7FAFFF005A0CEF /* WorkbenchItemView.swift */,
 			);
 			path = Workbench;
 			sourceTree = "<group>";
@@ -281,6 +283,7 @@
 			name = Beamcel;
 			packageProductDependencies = (
 				BBEBE3FF2C6C010B004A6DFD /* AsyncHTTPClient */,
+				BB17ADCE2C7E686E005A0CEF /* OrderedCollections */,
 			);
 			productName = Beamcel;
 			productReference = BB9E9FF52C6BF9560044F0F5 /* Beamcel.app */;
@@ -357,6 +360,7 @@
 			mainGroup = BB9E9FEC2C6BF9560044F0F5;
 			packageReferences = (
 				BBEBE3FE2C6C010B004A6DFD /* XCRemoteSwiftPackageReference "async-http-client" */,
+				BB17ADCD2C7E686E005A0CEF /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = BB9E9FF62C6BF9560044F0F5 /* Products */;
 			projectDirPath = "";
@@ -405,6 +409,7 @@
 				BBEBE42A2C716D8C004A6DFD /* ProjectListItemView.swift in Sources */,
 				BBEBE4242C715BE5004A6DFD /* NoProjectChoosenView.swift in Sources */,
 				BBEBE44B2C779D25004A6DFD /* StoryEditorView.swift in Sources */,
+				BB17ADD32C7FAFFF005A0CEF /* WorkbenchItemView.swift in Sources */,
 				BBEBE42C2C71757E004A6DFD /* ProjectDetailsView.swift in Sources */,
 				BBEBE4442C766F1E004A6DFD /* ProjectMenu.swift in Sources */,
 				BBEBE4282C71661D004A6DFD /* ProjectActionButtonView.swift in Sources */,
@@ -416,14 +421,13 @@
 				BBEBE4332C73CAB7004A6DFD /* GeneralSettingsView.swift in Sources */,
 				BBEBE4122C6E946C004A6DFD /* HttpRequestDispatcher.swift in Sources */,
 				BBEBE4222C715093004A6DFD /* ProjectPickerScene.swift in Sources */,
-				BBF2EBAF2C7A86DF0070F473 /* WorkbenchNavigatorItem.swift in Sources */,
 				BBEBE42E2C717FFC004A6DFD /* ProjectEditorView.swift in Sources */,
 				BBEBE4262C715C5E004A6DFD /* ProjectListView.swift in Sources */,
 				BBEBE43F2C76545B004A6DFD /* HttpRequestListItemView.swift in Sources */,
 				BBEBE4462C767061004A6DFD /* StoryMenu.swift in Sources */,
 				BBEBE4312C73A369004A6DFD /* SettingsView.swift in Sources */,
 				BBEBE43A2C74FF9C004A6DFD /* WorkbenchScene.swift in Sources */,
-				BBEBE4062C6C03C0004A6DFD /* BeamcelStory.swift in Sources */,
+				BB17ADD12C7F859A005A0CEF /* BeamcelItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +760,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BB17ADCD2C7E686E005A0CEF /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.3;
+			};
+		};
 		BBEBE3FE2C6C010B004A6DFD /* XCRemoteSwiftPackageReference "async-http-client" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swift-server/async-http-client";
@@ -767,6 +779,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BB17ADCE2C7E686E005A0CEF /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB17ADCD2C7E686E005A0CEF /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
 		BBEBE3FF2C6C010B004A6DFD /* AsyncHTTPClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBEBE3FE2C6C010B004A6DFD /* XCRemoteSwiftPackageReference "async-http-client" */;

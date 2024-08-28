@@ -13,12 +13,12 @@ final class BeamcelProject {
     var name: String
     var desc: String
     @Relationship(deleteRule: .cascade)
-    var stories: [BeamcelStory]
+    var items: [BeamcelItem]
     
     init() {
-        self.name = "Default name"
-        self.desc = "Default description"
-        self.stories = []
+        self.name = "New project"
+        self.desc = ""
+        self.items = []
     }
     
 }

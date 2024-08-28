@@ -13,10 +13,24 @@
       }
     },
     "Add request" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request erstellen"
+          }
+        }
+      }
     },
     "Add story" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Story erstellen"
+          }
+        }
+      }
     },
     "Beamcel" : {
       "localizations" : {
@@ -49,10 +63,24 @@
       }
     },
     "Delete request" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request löschen"
+          }
+        }
+      }
     },
     "Delete story" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Story löschen"
+          }
+        }
+      }
     },
     "Description" : {
       "localizations" : {
@@ -75,7 +103,14 @@
       }
     },
     "Edit story" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Story berarbeiten"
+          }
+        }
+      }
     },
     "Follow redirects" : {
       "localizations" : {
@@ -168,6 +203,9 @@
         }
       }
     },
+    "No item selected" : {
+
+    },
     "No Stories" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -201,6 +239,7 @@
       }
     },
     "Project: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -286,6 +325,9 @@
           }
         }
       }
+    },
+    "Test" : {
+
     },
     "Validate TLS certificates" : {
       "localizations" : {

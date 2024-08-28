@@ -27,6 +27,7 @@ struct WorkbenchScene: Scene {
         var body: some View {
             NavigationSplitView() {
                 WorkbenchNavigatorView(project: $openedProject, selectedItem: $selectedItem)
+                    .navigationSplitViewColumnWidth(min: 200, ideal: 250, max: 300)
                 .toolbar {
                     ToolbarItemGroup {
                         VStack {

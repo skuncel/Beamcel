@@ -18,7 +18,7 @@ final class BeamcelItem {
     var childs: [BeamcelItem]?
     var content: Data?
  
-    init(name: String, desc: String, type: BeamcelItemType, parent: BeamcelItem? = nil, childs: [BeamcelItem]? = .none, content: Data? = .none) {
+    init(name: String, desc: String, type: BeamcelItemType, parent: BeamcelItem? = nil, childs: [BeamcelItem]? = nil, content: Data? = .none) {
         self.name = name
         self.desc = desc
         self.type = type
@@ -27,7 +27,7 @@ final class BeamcelItem {
         self.content = content
     }
     
-    init(name: String, desc: String, type: BeamcelItemType, parent: BeamcelItem? = nil, childs: [BeamcelItem]? = .none, content: PersistentIdentifier) {
+    init(name: String, desc: String, type: BeamcelItemType, parent: BeamcelItem? = nil, childs: [BeamcelItem]? = nil, content: PersistentIdentifier) {
         self.name = name
         self.desc = desc
         self.type = type

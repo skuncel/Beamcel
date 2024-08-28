@@ -69,7 +69,7 @@ struct WorkbenchNavigatorView: View {
     }
     
     func addHttpRequest() {
-        let httpRequest = HttpRequest(name: "New request", secure: true, method: .GET, path: "/path", host: "localhost", headers: .none)
+        let httpRequest = HttpRequest(secure: true, method: .GET, path: "/path", host: "localhost", headers: .none)
         modelContext.insert(httpRequest);
         try! modelContext.save()
         let newRequestItem = BeamcelItem(name: "New request", desc: "", type: .httpRequest)

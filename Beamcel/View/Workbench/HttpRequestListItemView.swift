@@ -19,7 +19,7 @@ struct HttpRequestListItemView: View {
                 Label("GET", systemImage: "").labelStyle(PaddedBackgroundLabelStyle(httpMethod: unwrappedHttpRequest.method))
                 VStack {
                     VStack(alignment: .leading) {
-                        Text(httpRequest!.name ?? httpRequest!.path)
+                        Text(httpRequest!.path)
                             .foregroundColor(.primary)
                             .font(.system(size: 12, weight: .semibold))
                             .lineLimit(1)
@@ -29,7 +29,6 @@ struct HttpRequestListItemView: View {
             }
         }.onAppear() {
             httpRequest = modelContext.model(for: httpRequestId) as? HttpRequest
-            httpRequestId.hashValue;
         }
     }
     

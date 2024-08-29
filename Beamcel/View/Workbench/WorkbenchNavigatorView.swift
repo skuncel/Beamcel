@@ -64,7 +64,8 @@ struct WorkbenchNavigatorView: View {
     }
     
     func deleteStory() {
-        modelContext.delete(selectedItem!)
+        //modelContext.delete(selectedItem!)
+        selectedItem = nil
         try? modelContext.save()
     }
     

@@ -83,6 +83,7 @@
       }
     },
     "Description" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -93,6 +94,7 @@
       }
     },
     "Edit project" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

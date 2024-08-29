@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ProjectPickerScene: Scene {
-    
     public let sceneId: String = "project-picker"
     @Query let projects: [BeamcelProject]
     
@@ -30,7 +29,7 @@ struct ProjectPickerScene: Scene {
         }
     
     struct ProjectPickerView: View {
-                
+        @Environment(\.modelContext) var modelContext;
         @State var projectEditorSheetShown = false
         @State var existingProjects: [BeamcelProject]
         @State var selectedProject: BeamcelProject?
@@ -46,25 +45,19 @@ struct ProjectPickerScene: Scene {
                         .frame(width: 480)
                 }
             }
-            .sheet(isPresented: $projectEditorSheetShown) {
-                HStack {
-                    Button("Cancel") { projectEditorSheetShown.toggle() }
-                        .backgroundStyle(.windowBackground)
-                    Spacer()
-                    Button("Save") { }
-                        .backgroundStyle(.windowBackground)
-                }.padding()
-                if let unwrappedSelectedProject = selectedProject {
-                    @State var project = unwrappedSelectedProject;
-                    ProjectEditorView(project: $project as Binding<BeamcelProject>)
-                        .frame(width: 500, height: 250)
-                } else {
-                    @State var newProject = BeamcelProject();
-                    ProjectEditorView(project: $newProject)
-                        .frame(width: 500, height: 250)
-                }
+            .sheet(isPresented: $projectEditorSheetShown,
+                   onDismiss: saveSelectedProject) {
+                ProjectEditorView(project: $selectedProject)
             }
         }
+        
+        func saveSelectedProject() {
+            if let unwrappedProject = selectedProject {
+                modelContext.insert(unwrappedProject);
+                try? modelContext.save();
+            }
+        }
+        
     }
 }
 

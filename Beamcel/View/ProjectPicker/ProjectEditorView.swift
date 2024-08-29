@@ -8,29 +8,56 @@
 import SwiftUI
 
 struct ProjectEditorView: View {
+    @Environment(\.dismiss) var dismiss;
+    @Binding var project: BeamcelProject?
     
-    @Environment(\.modelContext) var modelContext;
-    @Binding var project: BeamcelProject
+    @State var projectName = "";
+    @State var projectDesc = "";
     
     var body: some View {
-        VStack {
-            Text("Edit project")
-                .font(.system(size: 36, weight: .bold))
+        NavigationStack {
             Form {
-                TextField("Name", text: $project.name)
-                TextField("Description", text: $project.desc)
+                TextField("Name", text: $projectName)
+                TextEditor(text: $projectDesc)
+            }.padding()
+        }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Edit story")
             }
-            .formStyle(.grouped)
-        }.padding()
-    }
-    
-    func saveProject() {
-        modelContext.insert(project)
-        try? modelContext.save()
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save") {
+                    withAnimation {
+                        if let unwrappedProject = project {
+                            unwrappedProject.name = projectName
+                            unwrappedProject.desc = projectDesc
+                            dismiss()
+                        } else {
+                            let newProject = BeamcelProject();
+                            newProject.name = projectName;
+                            newProject.desc = projectDesc;
+                            project = newProject;
+                        }
+                    }
+                }
+            }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") {
+                    withAnimation {
+                        dismiss()
+                    }
+                }
+            }
+        }.onAppear {
+            if let unwrappedProject = project {
+                projectName = unwrappedProject.name;
+                projectDesc = unwrappedProject.desc;
+            }
+        }
     }
 }
 
-#Preview {
-    @State var project: BeamcelProject = BeamcelProject();
-    return ProjectEditorView(project: $project)
-}
+//#Preview {
+//    @State var project: BeamcelProject = BeamcelProject();
+//    return ProjectEditorView(project: $project)
+//}
